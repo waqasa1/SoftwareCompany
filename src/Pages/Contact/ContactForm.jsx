@@ -57,84 +57,174 @@ const ContactForm = () => {
         
         <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
           <TextField
-            fullWidth
-            label="First Name"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            error={!!errors.firstName}
-            helperText={errors.firstName}
-          />
-          <TextField
-            fullWidth
-            label="Last Name"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            error={!!errors.lastName}
-            helperText={errors.lastName}
-          />
+  fullWidth
+  label="First Name"
+  name="firstName"
+  value={formData.firstName}
+  onChange={handleChange}
+  error={!!errors.firstName}
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: errors.firstName ? 'red' : '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: errors.firstName ? 'red' : '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: errors.firstName ? 'red' : '#1976d2',
+      },
+    },
+  }}
+/>
+
+        <TextField
+  fullWidth
+  label="Last Name"
+  name="lastName"
+  value={formData.lastName}
+  onChange={handleChange}
+  error={!!errors.lastName}
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: errors.firstName ? 'red' : '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: errors.firstName ? 'red' : '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: errors.firstName ? 'red' : '#1976d2',
+      },
+    },
+  }}
+/>
+
         </Box>
 
-        <TextField
-          fullWidth
-          label="Company"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-          error={!!errors.company}
-          helperText={errors.company}
-          sx={{ mb: 2 }}
-        />
+       <TextField
+  fullWidth
+  label="Company"
+  name="company"
+  value={formData.company}
+  onChange={handleChange}
+  sx={{
+    mb: 2,
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: errors.company ? 'red' : '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: errors.company ? 'red' : '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: errors.company ? 'red' : '#1976d2',
+      },
+    },
+  }}
+/>
 
-        <TextField
-          fullWidth
-          label="Company Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          error={!!errors.email}
-          helperText={errors.email}
-          sx={{ mb: 2 }}
-        />
+<TextField
+  fullWidth
+  label="Company Email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  sx={{
+    mb: 2,
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: errors.email ? 'red' : '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: errors.email ? 'red' : '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: errors.email ? 'red' : '#1976d2',
+      },
+    },
+  }}
+/>
 
-        <TextField
-          fullWidth
-          label="Phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          error={!!errors.phone}
-          helperText={errors.phone}
-          sx={{ mb: 2 }}
-        />
+<TextField
+  fullWidth
+  label="Phone"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  sx={{
+    mb: 2,
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: errors.phone ? 'red' : '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: errors.phone ? 'red' : '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: errors.phone ? 'red' : '#1976d2',
+      },
+    },
+  }}
+/>
 
-        <TextField
-          fullWidth
-          select
-          label="How can we help you?"
-          name="help"
-          value={formData.help}
-          onChange={handleChange}
-          error={!!errors.help}
-          helperText={errors.help}
-          sx={{ mb: 2 }}
-        >
-          <MenuItem value="support">Support</MenuItem>
-          <MenuItem value="sales">Sales Inquiry</MenuItem>
-          <MenuItem value="feedback">Feedback</MenuItem>
-        </TextField>
+<TextField
+  fullWidth
+  select
+  label="How can we help you?"
+  name="help"
+  value={formData.help}
+  onChange={handleChange}
+  sx={{
+    mb: 2,
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: errors.help ? 'red' : '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: errors.help ? 'red' : '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: errors.help ? 'red' : '#1976d2',
+      },
+    },
+  }}
+>
+  <MenuItem value="support">Support</MenuItem>
+  <MenuItem value="sales">Sales Inquiry</MenuItem>
+  <MenuItem value="feedback">Feedback</MenuItem>
+</TextField>
 
-        <TextField
-          fullWidth
-          multiline
-          rows={4}
-          label="Message (Optional)"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          sx={{ mb: 2 }}
-        />
+<TextField
+  fullWidth
+  multiline
+  rows={4}
+  label="Message (Optional)"
+  name="message"
+  value={formData.message}
+  onChange={handleChange}
+  sx={{
+    mb: 2,
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: '#c4c4c4',
+      },
+      '&:hover fieldset': {
+        borderColor: '#1976d2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#1976d2',
+      },
+    },
+  }}
+/>
 
         <Button variant="contained" fullWidth type="submit">Submit</Button>
       </Box>
