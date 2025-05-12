@@ -7,8 +7,6 @@ function App() {
     <Navbar />
     
     </div>
-    <p>Portfolio</p>
-    <p>let's start</p>
     </>
   )
 }
