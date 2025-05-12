@@ -45,7 +45,7 @@ const ContactForm = () => {
           borderRadius: 2,
           boxShadow: 3,
           position: "absolute",
-        top: { xs: "50px", lg: "-130px" },
+        top: { xs: "50px",md :"-130px", lg: "-150px" },
           left: "50%",
            transform: { xs: "translateX(-50%)", md: "translateX(-53%)", lg: "translateX(-53%)" },
           width: "90%",
