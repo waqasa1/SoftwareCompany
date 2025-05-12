@@ -27,7 +27,7 @@ function Navbar() {
 
 
   return (
-    <AppBar position="static" color='transparent' elevation={0} sx={{ borderBottom: '1px solid rgb(201, 193, 193)' }} >
+    <AppBar position="static" color='transparent' elevation={0} sx={{ borderBottom: '1px solid rgb(201, 193, 193)', maxWidth:'1500px', margin:'0 auto'  }} >
       <Container maxWidth="xl">
         <Toolbar disableGutters> {/* Desktop rocoo icon */}
           <AdbIcon sx={{ display: { xs: 'none', lg: 'flex' }, mr: 1 }} />
@@ -81,7 +81,7 @@ function Navbar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ display: {xs:'none',lg:'flex'}, flexDirection: 'column' }}>
             <Button sx={{ height: '20px', fontSize: '10px', color: 'black', bgcolor: 'rgb(245, 240, 240)' }}>
               {'Client Support'}<ArrowForwardIcon sx={{fontSize:'10px'}}/>
               </Button>
@@ -94,7 +94,7 @@ function Navbar() {
             </Link>
           </Box>
           <Box sx={{ marginLeft: '20px' }}>
-            <Link to='/hero'><Button variant="contained">Contact Us</Button></Link>
+            <Link to='/hero'><Button variant="contained" sx={{maxHeight:'30px'}}>Contact Us</Button></Link>
           </Box>
           {/* Mobile burger icon */}
           <Box sx={{ display: { xs: 'flex', lg: 'none' } }}>
