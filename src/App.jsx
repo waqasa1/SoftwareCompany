@@ -1,14 +1,13 @@
-import Navbar from "./Pages/Layout/Navbar"
-function App() {
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./Pages/AppRoutes";
 
+const App = () => {
   return (
-    <>
-    <div style={{width:'80%', margin:'0 auto'}}> 
-    <Navbar />
-    
-    </div>
-    </>
-  )
-}
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
