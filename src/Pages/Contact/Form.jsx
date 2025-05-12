@@ -108,7 +108,7 @@ function Contact() {
       sx={{
         display: "flex",
         flexDirection:{xs:"column", lg:"row"},
-        justifyContent: "space-between", // spread items evenly
+        justifyContent: "space-between", 
         alignItems: "center",
         width: "100%",
       }}
@@ -121,21 +121,21 @@ function Contact() {
             flexDirection:{xs:"column", lg:"row"},
             alignItems: "center",
             gap: 1,
-            padding: "8px 16px",
+            padding: "8px 8px",
             flex: 1,
+            marginBottom: "6vh"
           }}
         >
-          <Typography variant="body1" sx={{ flexGrow: .5}}>
+          <Typography variant="body1" sx={{ flexGrow: 1, fontSize:"12px"}}>
             {text}
           </Typography>
-          <ArrowForwardIosIcon fontSize="small" />
+          <ArrowForwardIosIcon fontSize="large" />
         </Box>
       ))}
     </Box>
           </Box>
         </Grid>
         <Grid size={{ xs: 12, lg: 5.5 }} sx={{ backgroundColor: "#d5dbec" }}>
-          {/* <p>hussain</p> */}
           <ContactForm />
         </Grid>
       </Grid>
