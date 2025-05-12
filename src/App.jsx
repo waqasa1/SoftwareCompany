@@ -1,8 +1,12 @@
+import Navbar from "./Components/Navbar"
 function App() {
 
   return (
     <>
-    <p>Portfolio</p>
+    <div style={{width:'80%', margin:'0 auto'}}> 
+    <Navbar />
+    
+    </div>
     </>
   )
 }
