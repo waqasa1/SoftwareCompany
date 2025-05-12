@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 const Layout = () => {
   return (
     <>
-      <div style={{ width: "80%", margin: "0 auto" }}>
+      <div style={{  maxWidth:'1500px', mx:'auto' }}>
         <Navbar />
       </div>
       <Outlet />

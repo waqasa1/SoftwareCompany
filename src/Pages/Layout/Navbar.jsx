@@ -10,9 +10,10 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 
-const pages = ['Home, Solutions', 'Company'];
+const pages = ['H.', 'Solutions', 'Company', 'Case Studies', 'Blog', 'Resources'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -28,8 +29,8 @@ function Navbar() {
   return (
     <AppBar position="static" color='transparent' elevation={0} sx={{ borderBottom: '1px solid rgb(201, 193, 193)' }} >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+        <Toolbar disableGutters> {/* Desktop rocoo icon */}
+          <AdbIcon sx={{ display: { xs: 'none', lg: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -37,9 +38,9 @@ function Navbar() {
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
               fontFamily: 'monospace',
-              flexGrow:'1',
+              flexGrow: '1',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -49,8 +50,8 @@ function Navbar() {
             Rocco
           </Typography>
 
-
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+         {/* Mobile rocoo icon */}
+          <AdbIcon sx={{ display: { xs: 'flex', lg: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -58,7 +59,7 @@ function Navbar() {
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: 'flex', lg: 'none' },
               flexGrow: 1,
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -68,7 +69,35 @@ function Navbar() {
           >
             Rocco
           </Typography>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          {/* Desktop menu items */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'inherit', display: 'block', ":hover":{color:'blue', background:'none'} }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Button sx={{ height: '20px', fontSize: '10px', color: 'black', bgcolor: 'rgb(245, 240, 240)' }}>
+              {'Client Support'}<ArrowForwardIcon sx={{fontSize:'10px'}}/>
+              </Button>
+            <Link href="tel:+923034291974" underline="none" color='black' sx={{
+              ":hover": {
+                color: 'blue'
+              }
+            }}>
+              {'+ 1-800-356-8933'}
+            </Link>
+          </Box>
+          <Box sx={{ marginLeft: '20px' }}>
+            <Link to='/hero'><Button variant="contained">Contact Us</Button></Link>
+          </Box>
+          {/* Mobile burger icon */}
+          <Box sx={{ display: { xs: 'flex', lg: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -82,6 +111,7 @@ function Navbar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
+              elevation={0}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
@@ -93,7 +123,17 @@ function Navbar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: 'block', lg: 'none' } }}
+              slotProps={{
+                paper: {
+                  sx: {
+                    color: 'black',
+                    width: '100%',
+                    maxWidth: '100%',
+                    marginLeft:'17px',
+                  },
+                }
+              }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -101,28 +141,6 @@ function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-          <Box sx={{display:'flex', flexDirection:'column'}}>
-            <Button sx={{height:'20px', fontSize:'10px', color:'black', bgcolor:'rgb(245, 240, 240)'}}>{'Client Support ->'}</Button>
-            <Link href="tel:+923034291974" underline="none" color='black' sx={{":hover":{
-              color:'blue'
-            }}}>
-              {'+ 1-800-356-8933'}
-            </Link>
-          </Box>
-          <Box sx={{marginLeft:'20px'}}>
-            <Button variant="contained">Contact Us</Button>
           </Box>
         </Toolbar>
       </Container>
