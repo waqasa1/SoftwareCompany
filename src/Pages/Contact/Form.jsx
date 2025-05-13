@@ -23,9 +23,10 @@ function Contact() {
   const options = ["1 We Schedule a call at your convenience ", "2 We do a discovery and consulting meting ", "3 We prepare a proposal "];
   return (
     <>
+    <div style={{margin:"40px 0px"}}>
       <Grid
         container
-        sx={{ width: { xs: "100%", lg: "80%" }, margin: "0 auto" }}
+        sx={{ width: { xs: "100%", lg: "80%" }, margin: "0 auto",  }}
       >
         <Grid
           size={{ xs: 12, lg: 6.5 }}
@@ -139,6 +140,7 @@ function Contact() {
           <ContactForm />
         </Grid>
       </Grid>
+      </div>
     </>
   );
 }
