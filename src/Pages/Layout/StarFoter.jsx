@@ -300,31 +300,56 @@ const StarFooter = () => {
             gap: { xs: 2, lg: 8 },
           }}
         >
-            <Box textAlign="center">
-          <LinkedInIcon />
-          <Typography>
-            LinkedIn
-          </Typography>
-            </Box>
-             <Box textAlign="center">
-         <YouTubeIcon />
-          <Typography>
-            YouTube
-          </Typography>
-            </Box>
-           <Box textAlign="center">
-         <FacebookIcon />
-          <Typography>
-            Facebook
-          </Typography>
-            </Box>
-          
-         <Box textAlign="center">
-         <GitHubIcon />
-          <Typography>
-            GitHub
-          </Typography>
-            </Box>
+            <Box 
+    textAlign="center" 
+    sx={{ 
+      '&:hover svg': { color: '#0A66C2' }, // LinkedIn blue
+      '&:hover p': { color: '#0A66C2' },
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <LinkedInIcon  />
+    <Typography>LinkedIn</Typography>
+  </Box>
+
+  {/* YouTube */}
+  <Box 
+    textAlign="center"
+    sx={{
+      '&:hover svg': { color: '#FF0000' }, // YouTube red
+      '&:hover p': { color: '#FF0000' },
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <YouTubeIcon />
+    <Typography>YouTube</Typography>
+  </Box>
+
+  {/* Facebook */}
+  <Box 
+    textAlign="center"
+    sx={{
+      '&:hover svg': { color: '#1877F2' }, // Facebook blue
+      '&:hover p': { color: '#1877F2' },
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <FacebookIcon />
+    <Typography>Facebook</Typography>
+  </Box>
+
+  {/* GitHub */}
+  <Box 
+    textAlign="center"
+    sx={{
+      '&:hover svg': { color: '#181717' }, // GitHub black
+      '&:hover p': { color: '#181717' },
+      transition: 'all 0.3s ease'
+    }}
+  >
+    <GitHubIcon />
+    <Typography>GitHub</Typography>
+  </Box>
           
         </Box>
         <Box sx={{ display: "flex", gap: 4, mt: 4 }}>
