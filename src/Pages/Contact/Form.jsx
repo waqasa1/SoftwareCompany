@@ -10,6 +10,7 @@ import {
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React from "react";
 import ContactForm from "./ContactForm";
+import StarFooter from "../Layout/StarFoter";
 
 function Contact() {
   const listItems = [
@@ -75,6 +76,7 @@ function Contact() {
               Call us at: 1-800-356-8933
             </Typography>
             {/* List Heading */}
+            <Box sx={{width:{xs:"100%",lg:"55%"}}}>
             <Typography sx={{ fontWeight: "bold", mb: 1, ml: 0.5 }}>
               Our Features:
             </Typography>
@@ -104,6 +106,7 @@ function Contact() {
                   </Box>
                 )
               )}
+            </Box>
             </Box>
             <Box
       sx={{
@@ -136,11 +139,12 @@ function Contact() {
     </Box>
           </Box>
         </Grid>
-        <Grid size={{ xs: 12, lg: 5.5 }} sx={{ backgroundColor: "#d5dbec" }}>
+        <Grid size={{ xs: 12, lg: 5.5 }} sx={{ backgroundColor: {lg:"#d5dbec"}}}>
           <ContactForm />
         </Grid>
       </Grid>
       </div>
+       <StarFooter />
     </>
   );
 }

@@ -2,7 +2,9 @@ import {
   Box,
   Button,
   Checkbox,
+  Divider,
   Grid,
+  Rating,
   TextField,
   Typography,
 } from "@mui/material";
@@ -10,7 +12,12 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import React from "react";
 import { CheckBox } from "@mui/icons-material";
 import footerDot from "../../assets/footer-dots.svg";
-import logofooter from "../../assets/logo-footer.svg"
+import logofooter from "../../assets/logo-footer.svg";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const StarFooter = () => {
   const SolutionItems = [
@@ -59,11 +66,11 @@ const StarFooter = () => {
                 mb: 0,
               }}
             >
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
                 {/* Solutions */}
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <Typography
-                    sx={{ fontWeight: "bold", mb: 3, color: "white" }}
+                    sx={{ fontWeight: "bold", mb: 2, color: "white" }}
                   >
                     Solutions
                   </Typography>
@@ -89,7 +96,7 @@ const StarFooter = () => {
                 {/* comapany */}
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <Typography
-                    sx={{ fontWeight: "bold", mb: 3, color: "white" }}
+                    sx={{ fontWeight: "bold", mb: 2, color: "white" }}
                   >
                     Our Features:
                   </Typography>
@@ -120,7 +127,7 @@ const StarFooter = () => {
                     justifyContent: "center",
                     width: { xs: "100%", lg: "75%" },
                     backgroundColor: "black",
-                    color: "white", 
+                    color: "white",
                     gap: 1,
                   }}
                 >
@@ -130,15 +137,15 @@ const StarFooter = () => {
                     label="Email"
                     variant="outlined"
                     InputLabelProps={{
-                      style: { color: "white" }, 
+                      style: { color: "white" },
                     }}
                     InputProps={{
-                      style: { color: "white" }, 
+                      style: { color: "white" },
                     }}
                     sx={{
                       "& .MuiOutlinedInput-root": {
                         "& fieldset": {
-                          borderColor: "white", 
+                          borderColor: "white",
                         },
                         "&:hover fieldset": {
                           borderColor: "white",
@@ -183,39 +190,149 @@ const StarFooter = () => {
               size={{ xs: 12, lg: 6 }}
               sx={{
                 p: 2,
-                display:"flex",
-                justifyContent:"center",
-                alignItems:"center"
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-             {/* Relative container to layer the images */}
-  <Box sx={{ position: "relative", display: "inline-block" }}>
-    {/* Background Image */}
-    <Box
-      component="img"
-      src={footerDot}
-      sx={{
-        height: { xs: "30vh", lg: "80%" },
-        display: "block",
-      }}
-    />
-    {/* Centered Overlay Image */}
-    <Box
-      component="img"
-      src={logofooter}
-      sx={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -70%)",
-        height: { xs: "8vh", lg: "10vh" },
-      }}
-    />
-  </Box>
+              {/* Relative container to layer the images */}
+              <Box sx={{ position: "relative", display: "inline-block" }}>
+                {/* Background Image */}
+                <Box
+                  component="img"
+                  src={footerDot}
+                  sx={{
+                    height: { xs: "30vh", lg: "80%" },
+                    display: "block",
+                  }}
+                />
+                {/* Centered Overlay Image */}
+                <Box
+                  component="img"
+                  src={logofooter}
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -70%)",
+                    height: { xs: "8vh", lg: "10vh" },
+                  }}
+                />
+              </Box>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
+      <Divider
+        sx={{ py: "20px", width: "80%", margin: "0 auto", mb: "20px" }}
+      />
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: { lg: "80%" },
+          margin: "0 auto",
+          justifyContent: "center",
+          paddingLeft: "10px",
+          marginBottom: "20px",
+          alignItems: "center",
+        }}
+      >
+        <Box sx={{ width: { xs: "100%", lg: "20%" }, mb: 2 }}>
+          <Box>
+            Reviewed on
+            <Rating
+              name="read-only"
+              value={5}
+              readOnly
+              sx={{ color: "red", marginLeft: "10px" }}
+              size="small"
+            />
+          </Box>
+          <Box>
+            {" "}
+            <img
+              src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/clutch-logo.svg"
+              alt="logo"
+              style={{ maxWidth: "80px", marginRight: "10px" }}
+            />
+            31 reviews
+          </Box>
+        </Box>
+        <Box sx={{ width: { xs: "50%", lg: "20%" }, mb: 2 }}>
+          <Typography
+            sx={{
+              borderLeft: "2px solid lightgray",
+              paddingLeft: "10px",
+              fontWeight: "400",
+              fontSize: "14px",
+            }}
+          >
+            {" "}
+            Seventh Ave, 20th Floor{" "}
+          </Typography>
+          <Typography sx={{ paddingLeft: "10px" }}>
+            {" "}
+            New York, NY 10018
+          </Typography>
+        </Box>
+        <Box sx={{ width: { xs: "50%", lg: "20%" }, mb: 2 }}>
+          <Typography
+            sx={{
+              borderLeft: "2px solid lightgray",
+              paddingLeft: "10px",
+              mfontWeight: "400",
+              fontSize: "14px",
+            }}
+          >
+            T: 1-800-356-8933
+          </Typography>
+          <Typography sx={{ paddingLeft: "10px" }}>
+            E: office@tecnologia.com
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            width: { xs: "50%", lg: "40%" },
+            mb: 2,
+            display: "flex",
+            justifyContent: "center",
+            gap: { xs: 2, lg: 8 },
+          }}
+        >
+            <Box textAlign="center">
+          <LinkedInIcon />
+          <Typography>
+            LinkedIn
+          </Typography>
+            </Box>
+             <Box textAlign="center">
+         <YouTubeIcon />
+          <Typography>
+            YouTube
+          </Typography>
+            </Box>
+           <Box textAlign="center">
+         <FacebookIcon />
+          <Typography>
+            Facebook
+          </Typography>
+            </Box>
+          
+         <Box textAlign="center">
+         <GitHubIcon />
+          <Typography>
+            GitHub
+          </Typography>
+            </Box>
+          
+        </Box>
+        <Box sx={{ display: "flex", gap: 4, mt: 4 }}>
+          <Typography>© 2025 VamTam. All rights reserved.</Typography>
+          <Typography>Terms & Conditions</Typography>
+          <Typography>Privacy Policy</Typography>
+        </Box>
+      </Box>
     </>
   );
 };
