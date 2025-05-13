@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Button, Divider, Rating } from '@mui/material'
+import { Box, Typography, Button, Divider, Rating, Card, CardMedia, CardActions, CardContent } from '@mui/material'
 import hero from '../../assets/heroimage.webp'
 import cost from '../../assets/Cost-effectiveness.svg'
 import innovative from '../../assets/Innovative.svg'
@@ -8,6 +8,44 @@ import Industry from '../../assets/Industry.svg'
 
 
 const HeroSection = () => {
+      const cardData = [
+    {
+      title: 'Managed Services',
+      description:
+        'Free up your internal resources to focus on the business by letting us handle day-to-day support services.',
+      image: Scalability,
+    },
+    {
+      title: 'Cloud Solutions',
+      description:
+        'Optimize your infrastructure with scalable and secure cloud solutions.',
+      image: innovative,
+    },
+    {
+      title: 'Cybersecurity',
+      description:
+        'Protect your business with enterprise-grade security solutions and monitoring.',
+      image: Industry,
+    },
+      {
+      title: 'Web Development',
+      description:
+        'Our web development services can help you establish an impactful online presence and reach your target audience effectively.',
+      image: Scalability,
+    },
+    {
+      title: 'Mobile Development',
+      description:
+        'We can help you create a customized mobile app that aligns with your brand and goals, with expertise in various mobile platforms.',
+      image: innovative,
+    },
+    {
+      title: 'Cloud Services',
+      description:
+        'With our expertise in cloud technologies, we can help you find the right cloud solutions that meet your business needs and goals.',
+      image: Industry,
+    },
+  ];
     return (
         <>
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, width: { lg: '80%' }, margin: '20px auto', px: '50px' }}>
@@ -81,16 +119,126 @@ const HeroSection = () => {
                 </Box>
             </Box>
             <Divider sx={{ width: '80%', margin: '0 auto', mb: '20px', py: '20px' }} />
-            <Box sx={{width: { lg: '80%' }, margin: '0 auto'}}>
-                <Button sx={{fontSize:'12px',textTransform:'none', textDecoration:'underline',color:'blue',fontWeight:'bold',
+            <Box sx={{ width: { lg: '80%' }, margin: '0 auto' }}>
+                <Button sx={{
+                    fontSize: '12px', textTransform: 'none', color: 'blue', fontWeight: 'bold',
                     ":hover": {
                         color: 'black',
                         background: 'none'
-                    }
+                    },
+                    '&::after': {
+                        content: '""',
+                        position: 'absolute',
+                        left: 0,
+                        bottom: '10px',
+                        height: '1px',
+                        width: '0%',
+                        backgroundColor: 'black', // MUI primary color or custom
+                        transition: 'width 0.3s ease-in-out',
+                        marginLeft: '9px'
+                    },
+                    '&:hover::after': {
+                        width: '80%',
+                        marginLeft: '9px'
+                    },
                 }}>
                     About Rocco
                 </Button>
             </Box>
+            <Box sx={{ backgroundColor: '#B3C9E7', py: '20px' }}>
+                <Box sx={{ width: { lg: '80%' }, margin: '0 auto' }}>
+                    <Button sx={{ color: 'gray', backgroundColor: 'white', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>How We Do</Button>
+                    <Typography sx={{ fontSize: '48px', fontWeight: '700', letterSpacing: '-1px' }}>Solutions</Typography>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            justifyContent: 'center',
+                            gap: 2,
+                            mt: 4,
+                        }}
+                    >
+                        {cardData.map((card, index) => (
+                            <Card
+                                key={index}
+                                sx={{
+                                    width: { xs: '100%', sm: '45%', md: '30%' },
+                                    padding: '10px',
+                                    transition: '0.3s',
+                                    ":hover": {
+                                        boxShadow: 24,
+                                    },
+                                    '&:hover .hover-text': {
+                                        color: 'blue',
+                                    },
+                                }}
+                            >
+                                <img
+                                    alt={card.title}
+                                    src={card.image}
+                                    height="80"
+                                    width="80"
+                                    style={{ paddingLeft: '20px' }}
+                                />
+
+                                <CardContent  sx={{ minHeight: '100px' }}>
+                                    <Typography
+                                        gutterBottom
+                                        className="hover-text"
+                                        variant="h5"
+                                        component="div"
+                                        sx={{ fontSize: '24px', fontWeight: 600 }}
+                                    >
+                                        {card.title}
+                                    </Typography>
+
+                                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                                        {card.description}
+                                    </Typography>
+                                </CardContent>
+
+                                <Divider />
+
+                                <CardActions>
+                                    <Button
+                                        sx={{
+                                            fontSize: '12px',
+                                            textTransform: 'none',
+                                            color: 'blue',
+                                            fontWeight: 'bold',
+                                            position: 'relative',
+                                            ":hover": {
+                                                color: 'black',
+                                                background: 'none',
+                                            },
+                                            '&::after': {
+                                                content: '""',
+                                                position: 'absolute',
+                                                left: 0,
+                                                bottom: '10px',
+                                                height: '1px',
+                                                width: '0%',
+                                                backgroundColor: 'black',
+                                                transition: 'width 0.3s ease-in-out',
+                                                marginLeft: '9px',
+                                            },
+                                            '&:hover::after': {
+                                                width: '80%',
+                                            },
+                                        }}
+                                    >
+                                        Learn More
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        ))}
+                    </Box>
+                    <Box sx={{display:'flex', justifyContent:'center', marginTop:'20px'}}>
+                        <Button variant='contained'>View All Solutions</Button>
+                    </Box>
+                </Box>
+            </Box>
+
         </>
     )
 }
