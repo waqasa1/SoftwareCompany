@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box, Typography, Button, Divider, Rating, Card, CardMedia, CardActions, CardContent } from '@mui/material'
-import insurance from '../../assets/insurance.webp'
-import ness from '../../assets/ness.webp'
-import undergroup from '../../assets/undergroup.webp'
-const SuccessStories = () => {
+import insurance from '../assets/insurance.webp'
+import ness from '../assets/ness.webp'
+import undergroup from '../assets/undergroup.webp'
+
+const CaseStudies = () => {
     const cardData = [
         {
             niche:'Cloud Hosting',
@@ -11,6 +12,8 @@ const SuccessStories = () => {
             description:
                 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
             image: insurance,
+            bullet1:'',
+            bullet2:''
         },
         {
             niche:'IT Consulting',
@@ -18,6 +21,8 @@ const SuccessStories = () => {
             description:
                 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
             image: ness,
+            bullet1:'',
+            bullet2:''
         },
         {
             niche:'Mobile development',
@@ -25,14 +30,18 @@ const SuccessStories = () => {
             description:
                 'Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.',
             image: undergroup,
+            bullet1:'',
+            bullet2:''
         },
     ];
     return (
         <>
             <Box sx={{ py: '20px' }}>
                 <Box sx={{ width: { lg: '80%' }, margin: '0 auto' }}>
-                    <Button sx={{ color: 'gray', backgroundColor: 'rgb(245, 237, 237)', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>Where We Do</Button>
-                    <Typography sx={{ fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700', letterSpacing: '-1px' }}>Success Stories</Typography>
+                    <Box sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                    <Button sx={{ color: 'gray', backgroundColor: 'rgb(245, 237, 237)', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>Case studies</Button>
+                    <Typography sx={{ fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700', letterSpacing: '-1px' }}>Featured case studies</Typography>
+                    </Box>
                     <Box
                         sx={{
                             display: 'flex',
@@ -66,8 +75,8 @@ const SuccessStories = () => {
                                 <CardContent sx={{ minHeight: '100px' }}>
                                     <Button
                                         sx={{
-                                            marginLeft:'-8px',
-                                            marginBottom:'10px',
+                                            marginLeft: '-8px',
+                                            marginBottom: '10px',
                                             fontSize: '12px',
                                             color: 'rgb(168, 159, 159)',
                                             fontWeight: '600',
@@ -84,16 +93,16 @@ const SuccessStories = () => {
                                         className="hover-text"
                                         variant="h5"
                                         component="div"
-                                        sx={{ fontSize: '20px', fontWeight: 600, ":hover":{color:'blue'} }}
+                                        sx={{ fontSize: '20px', fontWeight: 600, ":hover": { color: 'blue' } }}
                                     >
                                         {card.title}
                                     </Typography>
 
-                                    <Typography variant="body2" sx={{ color: 'text.secondary', fontSize:'16px' , marginTop:'10px'}}>
+                                    <Typography variant="body2" sx={{ fontSize: '16px', marginTop: '10px' }}>
                                         {card.description}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ color: 'text.secondary', fontSize:'16px', marginTop:'10px'}}>
-                                        ✔︎ Modern infrastructure<br/>
+                                    <Typography variant="body2" sx={{ fontSize: '16px', marginTop: '10px' }}>
+                                        ✔︎ Modern infrastructure<br />
                                         ✔︎ Consulting services
                                     </Typography>
                                 </CardContent>
@@ -124,4 +133,4 @@ const SuccessStories = () => {
     )
 }
 
-export default SuccessStories
+export default CaseStudies

@@ -24,7 +24,7 @@ function Contact() {
   const options = ["1 We Schedule a call at your convenience ", "2 We do a discovery and consulting meting ", "3 We prepare a proposal "];
   return (
     <>
-    <div style={{margin:"40px 0px"}}>
+    <div style={{margin:"40px 0px"}} id="contact-form-section">
       <Grid
         container
         sx={{ width: { xs: "100%", lg: "80%" }, margin: "0 auto",  }}

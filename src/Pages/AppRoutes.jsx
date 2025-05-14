@@ -5,6 +5,7 @@ import Contact from "./Contact/Form";
 import Home from './Home/Home'
 import Slick from "./Home/Slick";
 import Testimonials from './Home/Testimonials'
+import CaseStudies from "./CaseStudies";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/slick" element={<Slick/>}/>
       <Route path="/hero" element={<Home/>}/>
       <Route path="/slider" element={<Testimonials/>} />
+      <Route path="case-studies" element={<CaseStudies/>} />
       </Route>
     </Routes>
     </>

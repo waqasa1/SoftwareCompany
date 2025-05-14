@@ -54,7 +54,7 @@ const HeroSection = () => {
                     <Typography sx={{ fontSize: { xs: '1.2rem', lg: '3.5rem' }, lineHeight: '1em', letterSpacing: '-1px', marginBottom: '20px', fontWeight: '600', }}>We manage your IT, so you can manage your business.</Typography>
                     <Typography sx={{ fontSize: { xs: '1rem', lg: '2rem' } }}>Take charge of your business continuity with innovative IT solutions</Typography>
                     <Box sx={{ marginTop: '10px' }} >
-                        <Button variant="contained" sx={{ marginRight: '20px', marginBottom: { xs: '5px', lg: '0px' }, textTransform: 'none' }}>Schedule a Free Consultation</Button>
+                        <Button onClick={()=>{const contactSection = document.getElementById('contact-form-section'); if (contactSection) {contactSection.scrollIntoView({ behavior: 'smooth' });}}} variant="contained"  sx={{ marginRight: '20px', marginBottom: { xs: '5px', lg: '0px' }, textTransform: 'none' }} >Schedule a Free Consultation</Button>
                         <Button variant="contained" sx={{ textTransform: 'none' }}>Services</Button>
                     </Box>
                 </Box>
