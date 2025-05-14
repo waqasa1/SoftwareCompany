@@ -144,7 +144,6 @@ function Contact() {
         </Grid>
       </Grid>
       </div>
-       <StarFooter />
     </>
   );
 }
