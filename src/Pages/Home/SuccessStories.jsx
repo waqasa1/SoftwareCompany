@@ -44,7 +44,7 @@ const SuccessStories = () => {
                                 key={index}
                                 sx={{
                                     width: { xs: '100%', lg: '30%' },
-                                    height: '520px',
+                                    height: 'fit-content',
                                     padding: '12px',
                                     margin: { xs: '10px', lg: '0' },
                                     transition: '0.3s',
