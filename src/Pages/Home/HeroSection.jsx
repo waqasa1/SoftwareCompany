@@ -48,7 +48,7 @@ const HeroSection = () => {
     ];
     return (
         <>
-          {/*--------------------- Hero Section ------------------*/}
+            {/*--------------------- Hero Section ------------------*/}
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, width: { lg: '80%' }, margin: '20px auto', px: '50px' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', my: 'auto' }}>
                     <Typography sx={{ fontSize: { xs: '1.2rem', lg: '3.5rem' }, lineHeight: '1em', letterSpacing: '-1px', marginBottom: '20px', fontWeight: '600', }}>We manage your IT, so you can manage your business.</Typography>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             </Box>
             {/*---------------------What We Do Section ------------------*/}
             <Box sx={{ display: 'flex', flexDirection: 'row', marginBottom: '20px', width: { lg: '80%' }, margin: '0 auto', height: '300px', backgroundColor: '#242627', borderRadius: { xs: '0', md: '5px' }, justifyContent: 'space-between', overflow: 'hidden', px: '20px' }}>
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', width: '50%', justifyContent:'space-between' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', width: '50%', justifyContent: 'space-between' }}>
                     <Button sx={{ color: '#DEE0FF', backgroundColor: '#00000026', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>What We Do</Button>
                     <Typography sx={{ color: '#DEE0FF', fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700' }}>Simplifying IT for a complex world.</Typography>
                 </Box>
@@ -153,7 +153,7 @@ const HeroSection = () => {
             <Box sx={{ backgroundColor: '#B3C9E7', py: '20px' }}>
                 <Box sx={{ width: { lg: '80%' }, margin: '0 auto' }}>
                     <Button sx={{ color: 'gray', backgroundColor: 'white', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>How We Do</Button>
-                    <Typography sx={{ fontSize: {xs:'20px',lg:'48px'}, fontWeight: '700', letterSpacing: '-1px' }}>Solutions</Typography>
+                    <Typography sx={{ fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700', letterSpacing: '-1px' }}>Solutions</Typography>
                     <Box
                         sx={{
                             display: 'flex',
@@ -250,7 +250,7 @@ const HeroSection = () => {
                 <Box sx={{ width: { lg: '80%' }, margin: '0 auto' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
                         <Box sx={{ width: '50%' }}><Button sx={{ color: 'gray', backgroundColor: 'rgb(245, 237, 237)', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>What We Do</Button></Box>
-                        <Typography sx={{ fontSize: {xs:'20px',lg:'48px'}, fontWeight: '700', letterSpacing: '-1px', width: {lg:'50%'}, marginTop:'10px', paddingLeft:{xs:'10px', lg:'0'} }}>Solving IT challenges in every industry, every day.</Typography>
+                        <Typography sx={{ fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700', letterSpacing: '-1px', width: { lg: '50%' }, marginTop: '10px', paddingLeft: { xs: '10px', lg: '0' } }}>Solving IT challenges in every industry, every day.</Typography>
 
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 2, mt: 4 }}>
                             {/* Put all the boxes inside this container */}
@@ -274,6 +274,30 @@ const HeroSection = () => {
                             </Box>
                         </Box>
                     </Box>
+                    <Button sx={{
+                        fontSize: '12px', textTransform: 'none', color: 'blue', fontWeight: 'bold',
+                        ":hover": {
+                            color: 'black',
+                            background: 'none'
+                        },
+                        '&::after': {
+                            content: '""',
+                            position: 'absolute',
+                            left: 0,
+                            bottom: '10px',
+                            height: '1px',
+                            width: '0%',
+                            backgroundColor: 'black',
+                            transition: 'width 0.3s ease-in-out',
+                            marginLeft: '9px'
+                        },
+                        '&:hover::after': {
+                            width: '80%',
+                            marginLeft: '9px'
+                        },
+                    }}>
+                        View All industries
+                    </Button>
                 </Box>
             </Box>
 
