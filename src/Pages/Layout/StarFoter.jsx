@@ -207,7 +207,7 @@ const StarFooter = () => {
                   }}
                 />
                 {/* Centered Overlay Image */}
-                <Box
+                {/* <Box
                   component="img"
                   src={logofooter}
                   sx={{
@@ -217,7 +217,7 @@ const StarFooter = () => {
                     transform: "translate(-50%, -70%)",
                     height: { xs: "8vh", lg: "10vh" },
                   }}
-                />
+                /> */}
               </Box>
             </Grid>
           </Grid>

@@ -1,31 +1,25 @@
 import { Grid, Box, Typography, Card, CardContent, CardMedia, CardActions, Button } from '@mui/material';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import insurance from '../../assets/insurance.webp'
-import ness from '../../assets/ness.webp'
-import undergroup from '../../assets/undergroup.webp'
 import React, { useState } from "react";
 const cardData = [
   {
     title: 'Major Insurance Provider Saves $750k per Month With Big Data Migration',
     description: 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
-    image: insurance,
   },
   {
     title: 'Maximizing Efficiency with Proper Technology Implementation – Coffee Success Story',
     description: 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
-    image: ness,
   },
   {
     title: 'Strategic Move to an AI-supported application for Public Safety Travel App in London',
     description: 'Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.',
-    image: undergroup,
   },
   // Add more cards as needed
   {
     title: 'Fourth Card Example',
     description: 'This is an additional card to demonstrate the carousel functionality.',
-    image: undergroup,
+    
   },
 ];
 const Slick = () => {
@@ -95,10 +89,10 @@ const Slick = () => {
       </Grid>
       
       <Grid size={{xs:12}}>
-        <Box sx={{ height: '8px', backgroundColor: '#f5f5e8'}} />
+        <Box sx={{ height: '10px', backgroundColor: '#1F2121'}} />
       </Grid>
       
-      <Grid size={{xs:12}} sx={{width:"80%", margin:"0 auto", overflow: 'hidden',m:10}}>
+      <Grid size={{xs:12}} sx={{width:"80%", margin:"0 auto", overflow: 'hidden',m:8}}>
         <Box sx={{ 
           display: 'flex',
           transition: 'transform 0.5s ease',
@@ -120,53 +114,27 @@ const Slick = () => {
                   width: '100%',
                
                   maxWidth: { xs: '100%', lg: '90%' },
-                
+                backgroundColor:"#1a1b1c",
                 height:"auto",
                   padding: '12px',
                   margin: { xs: '10px 0', lg: '0 10px' },
                   transition: '0.3s',
-                  border: '1px solid rgb(231, 225, 225)',
+                  border: '1px solid rgba(3, 1, 1, 0.7)',
                   borderRadius: '10px',
                 }}
               >
-                {/* <CardMedia
-                  component="img"
-                  height="100"
-                  image={card.image}
-                  alt={card.title}
-                  sx={{ borderRadius: '10px' }}
-                /> */}
                 <CardContent sx={{ minHeight: '100px' }}>
-                  {/* <Button
-                    sx={{
-                      marginLeft:'-8px',
-                      marginBottom:'10px',
-                      fontSize: '12px',
-                      color: 'rgb(168, 159, 159)',
-                      fontWeight: '600',
-                      ":hover": {
-                        color: 'blue',
-                        background: 'none',
-                      },
-                    }}
-                  >
-                    Cloud Hosting
-                  </Button> */}
                   <Typography
                     gutterBottom
                     variant="h5"
                     component="div"
-                    sx={{ fontSize: '20px', fontWeight: 600, ":hover":{color:'blue'} }}
+                    sx={{ fontSize: '20px', fontWeight: 600,color:"#f5f5e8"  }}
                   >
                     {card.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', fontSize:'16px', marginTop:'10px'}}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', fontSize:'16px', marginTop:'10px',color:"#f5f5e8"}}>
                     {card.description}
                   </Typography>
-                  {/* <Typography variant="body2" sx={{ color: 'text.secondary', fontSize:'16px', marginTop:'10px'}}>
-                    ✔︎ Modern infrastructure<br/>
-                    ✔︎ Consulting services
-                  </Typography> */}
                 </CardContent>
                 <CardActions>
                   <Button
@@ -176,8 +144,10 @@ const Slick = () => {
                       color: 'black',
                       fontWeight: '600',
                       position: 'relative',
+                      color:"#f5f5e8",
                       ":hover": {
-                        color: 'blue',
+                        color: 'white',
+                        fontWeight:"bold",
                         background: 'none',
                       },
                     }}
