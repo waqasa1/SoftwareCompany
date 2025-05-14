@@ -1,8 +1,14 @@
 import React from 'react'
 import { Box, Typography, Button, Divider, Rating, Card, CardMedia, CardActions, CardContent } from '@mui/material'
-import insurance from '../assets/insurance.webp'
-import ness from '../assets/ness.webp'
-import undergroup from '../assets/undergroup.webp'
+import insurance from '../../assets/insurance.webp'
+import ness from '../../assets/ness.webp'
+import undergroup from '../../assets/undergroup.webp'
+import c1 from '../../assets/c1.webp'
+import c2 from '../../assets/c2.webp'
+import c3 from '../../assets/c3.webp'
+import c4 from '../../assets/c4.webp'
+import c5 from '../../assets/c5.webp'
+import c6 from '../../assets/c6.webp'
 
 const CaseStudies = () => {
     const cardData = [
@@ -12,8 +18,8 @@ const CaseStudies = () => {
             description:
                 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
             image: insurance,
-            bullet1:'',
-            bullet2:''
+            bullet1:'Modern infrastructure',
+            bullet2:'Consulting services'
         },
         {
             niche:'IT Consulting',
@@ -21,8 +27,8 @@ const CaseStudies = () => {
             description:
                 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
             image: ness,
-            bullet1:'',
-            bullet2:''
+            bullet1:'Modern infrastructure',
+            bullet2:'Consulting services'
         },
         {
             niche:'Mobile development',
@@ -30,8 +36,62 @@ const CaseStudies = () => {
             description:
                 'Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.',
             image: undergroup,
-            bullet1:'',
-            bullet2:''
+            bullet1:'Modern infrastructure',
+            bullet2:'Consulting services'
+        },
+        {
+            niche:'App develoment',
+            title: 'Convenience, savings, and rewards at your fingertips',
+            description:
+                'Paysafe’s fast-paced expansion had resulted in a lack of process consistency & standardisation across their acquired brands.',
+            image: c1,
+            bullet1:'Digital transformation',
+            bullet2:'Consulting services'
+        },
+        {
+            niche:'App develoment',
+            title: 'Private trust management and trading platform',
+            description:
+                'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
+            image: c2,
+            bullet1:'Modern infrastructure',
+            bullet2:'Consulting services'
+        },
+        {
+            niche:'App develoment',
+            title: 'Online platform for distance learning',
+            description:
+                'Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.',
+            image: c3,
+            bullet1:'Modern infrastructure',
+            bullet2:'Consulting services'
+        },
+        {
+            niche:'Digital transformation',
+            title: 'Delivering enterprise-wide efficiencies at Paysafe through Intelligent Automation',
+            description:
+                'Paysafe’s fast-paced expansion had resulted in a lack of process consistency & standardisation across their acquired brands.',
+            image: c4,
+            bullet1:'Digital transformation ',
+            bullet2:'International growth'
+        },
+        {
+            niche:'IT Consulting',
+            title: 'Bringing premium live casino experiences to gamers across the globe',
+            description:
+                'Authentic first partnered with Tecnologia January 2021, following their referral from another of our clients in the iGaming industry.',
+            image: c5,
+            bullet1:'Digital transformation',
+            bullet2:'iGaming'
+        },
+        {
+            niche:'Cyber Security',
+            title: 'Building, optimising, and future-proofing existing infrastructures with payment gateways',
+            description:
+                'Core to growing a gaming company is a robust payments infrastructure.',
+            image: undergroup,
+            bullet1:'Cyber Security',
+            bullet2:'Consulting services'
         },
     ];
     return (
@@ -56,7 +116,7 @@ const CaseStudies = () => {
                                 key={index}
                                 sx={{
                                     width: { xs: '100%', lg: '30%' },
-                                    height: 'fit-content',
+                                    height: 'auto',
                                     padding: '12px',
                                     margin: { xs: '10px', lg: '0' },
                                     transition: '0.3s',
@@ -102,8 +162,10 @@ const CaseStudies = () => {
                                         {card.description}
                                     </Typography>
                                     <Typography variant="body2" sx={{ fontSize: '16px', marginTop: '10px' }}>
-                                        ✔︎ Modern infrastructure<br />
-                                        ✔︎ Consulting services
+                                        ✔︎ {card.bullet1}
+                                    </Typography>
+                                    <Typography variant="body2" sx={{ fontSize: '16px', marginTop: '10px' }}>
+                                        ✔︎ {card.bullet2}
                                     </Typography>
                                 </CardContent>
 
