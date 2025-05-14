@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import Slider from "react-slick"
-import { Paper, Rating, Box, Typography, IconButton } from "@mui/material"
+import { Paper, Rating, Box, Typography, IconButton, Divider } from "@mui/material"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import "slick-carousel/slick/slick.css"
@@ -31,7 +31,7 @@ const testimonials = [
   },
 ]
 
-export default function TestimonialCarousel() {
+export default function Testimonials() {
   const sliderRef = useRef(null)
 
   const settings = {
@@ -57,25 +57,30 @@ export default function TestimonialCarousel() {
   }
 
   return (
-    <Box sx={{width: { lg: '80%' }, margin: '20px auto', px: '50px'}}>
+    <Box sx={{ width: { lg: '80%' }, mx:'auto', px: '15px' }}>
       <Paper
         elevation={0}
         sx={{
-          width: "100%",
           maxWidth: 800,
-          mx: "auto",
           p: 4,
           borderRadius: 2,
           border: "1px solid #eaeaea",
+          mx:'auto'
         }}
       >
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="outline-none">
-              <div className="mb-5">
+              <div className="mb-5" style={{display:'flex'}}>
                 <img src={testimonial.avatar} alt={testimonial.author} width={50} height={50} style={{ marginBottom: '20px' }} />
+                <IconButton onClick={goToPrevious} sx={{ bgcolor: "#f5f5f5", mr: 1, "&:hover": { color: "blue" }, display: { xs: 'block', lg: 'none' }, ml:'auto' }}>
+                  <ArrowBackIcon />
+                </IconButton>
+                <IconButton onClick={goToNext} sx={{ bgcolor: "#f5f5f5", "&:hover": { color: "blue" }, display: { xs: 'block', lg: 'none' } }}>
+                  <ArrowForwardIcon />
+                </IconButton>
               </div>
-              <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.6, fontSize: "30px" }}>
+              <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.6, fontSize: { xs: '18px', lg: "30px" } }}>
                 {testimonial.text}
               </Typography>
 
@@ -93,13 +98,14 @@ export default function TestimonialCarousel() {
           ))}
         </Slider>
 
-        <Box sx={{ display: "flex", justifyContent: "flex-start", mt: '-8px' }}>
-          <IconButton onClick={goToPrevious} sx={{ bgcolor: "#f5f5f5", mr: 1, "&:hover": { color: "blue" } }}>
+        <Box sx={{ display: "flex", justifyContent: "flex-start", mt: '-8px', flexDirection: { xs: 'column', lg: 'row' } }}>
+          <IconButton onClick={goToPrevious} sx={{ bgcolor: "#f5f5f5", mr: 1, "&:hover": { color: "blue" }, display: { xs: 'none', lg: 'block' } }}>
             <ArrowBackIcon />
           </IconButton>
-          <IconButton onClick={goToNext} sx={{ bgcolor: "#f5f5f5", "&:hover": { color: "blue" } }}>
+          <IconButton onClick={goToNext} sx={{ bgcolor: "#f5f5f5", "&:hover": { color: "blue" }, display: { xs: 'none', lg: 'block' } }}>
             <ArrowForwardIcon />
           </IconButton>
+          <Divider sx={{ width: '80%', margin: '0 auto', mb: '20px', display: { xs: 'block', lg: 'none' } }} />
           <Box sx={{ width: { xs: "100%", lg: "30%" }, mb: 2, ml: "auto" }}>
             <Box sx={{ display: "flex" }}>
               Reviewed on
@@ -124,7 +130,7 @@ export default function TestimonialCarousel() {
             <Box>
               <Box sx={{ display: "flex" }}>
                 4.9
-                <Rating name="read-only" value={5} readOnly sx={{ color: "#FBB002" }} size="small" />
+                <Rating name="read-only" value={4.5} precision={0.5} readOnly size="small" />
               </Box>
               <Box>Customer Reviews</Box>
             </Box>

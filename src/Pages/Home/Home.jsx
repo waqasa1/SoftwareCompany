@@ -3,12 +3,14 @@ import HeroSection from './HeroSection'
 import Recognized from './Recognized'
 import Contact from '../Contact/Form'
 import SuccessStories from './SuccessStories'
+import Testimonials from './Testimonials'
 
 const Home = () => {
   return (
     <div>
         <HeroSection />
         <SuccessStories />
+        <Testimonials/>
         <Contact />
         <Recognized />
     </div>
