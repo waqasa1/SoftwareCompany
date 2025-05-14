@@ -7,6 +7,7 @@ import Slick from "./Home/Slick";
 import Testimonials from './Home/Testimonials'
 import Case from "./CaseStudies/Case";
 import Blog from "./Home/Blog";
+import ContactPage from './Contact/ContactPage'
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
       <Route path="/blog" element={<Blog />}/>
       <Route path="/slider" element={<Testimonials/>} />
       <Route path="/case-studies" element={<Case/>} />
+      <Route path="/cont" element={<ContactPage/>} />
       </Route>
     </Routes>
     </>
