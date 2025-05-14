@@ -6,6 +6,7 @@ import Home from './Home/Home'
 import Slick from "./Home/Slick";
 import Testimonials from './Home/Testimonials'
 import CaseStudies from "./CaseStudies";
+import Blog from "./Home/Blog";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route index element={<Contact />} />
       <Route path="/slick" element={<Slick/>}/>
       <Route path="/hero" element={<Home/>}/>
+      <Route path="/blog" element={<Blog />}/>
       <Route path="/slider" element={<Testimonials/>} />
       <Route path="case-studies" element={<CaseStudies/>} />
       </Route>
