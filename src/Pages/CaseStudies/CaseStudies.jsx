@@ -8,7 +8,6 @@ import c2 from '../../assets/c2.webp'
 import c3 from '../../assets/c3.webp'
 import c4 from '../../assets/c4.webp'
 import c5 from '../../assets/c5.webp'
-import c6 from '../../assets/c6.webp'
 
 const CaseStudies = () => {
     const cardData = [
