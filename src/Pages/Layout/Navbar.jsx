@@ -168,7 +168,7 @@ function Navbar() {
             </Button>
           </Box>
           <Box sx={{ marginLeft: '20px' }}>
-            <Link to='/hero'><Button variant="contained" sx={{maxHeight:'30px', textTransform:'none'}}>Contact Us</Button></Link>
+            <Link to='/contact'><Button variant="contained" sx={{maxHeight:'30px', textTransform:'none'}}>Contact Us</Button></Link>
           </Box>
           {/* Mobile burger icon */}
           <Box sx={{ display: { xs: 'flex', lg: 'none' } }}>
