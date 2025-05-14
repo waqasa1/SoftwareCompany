@@ -8,6 +8,7 @@ import Testimonials from './Home/Testimonials'
 import Case from "./CaseStudies/Case";
 import Blog from "./Home/Blog";
 import ContactPage from './Contact/ContactPage'
+import Solution from "./Solution/Solution";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
       <Route path="/slider" element={<Testimonials/>} />
       <Route path="/case-studies" element={<Case/>} />
       <Route path="/cont" element={<ContactPage/>} />
+      <Route path="/solution" element={<Solution />}/>
       </Route>
     </Routes>
     </>
