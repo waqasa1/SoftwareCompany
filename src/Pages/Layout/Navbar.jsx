@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const pages = ['H.', 'Solutions', 'Company', 'Case Studies', 'Blog', 'Resources'];
 
@@ -25,22 +25,50 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
+  const navigate = useNavigate()
+
+   const handleHomeClick = () => {
+    navigate("/hero")
+  };
+
+  const handleSolutionsClick = () => {
+    // Handle Solutions click logic
+    console.log("Solutions clicked");
+  };
+
+  const handleCompanyClick = () => {
+    // Handle Company click logic
+    console.log("Company clicked");
+  };
+
+  const handleCaseStudiesClick = () => {
+   navigate("/case-studies")
+  };
+
+  const handleBlogClick = () => {
+   navigate("/blog")
+  };
+
+  const handleResourcesClick = () => {
+    // Handle Resources click logic
+    console.log("Resources clicked");
+  };
 
   return (
     <AppBar position="static" color='transparent' elevation={0} sx={{ borderBottom: '1px solid rgb(201, 193, 193)',width:{xs:'100%', lg:'80%'}, margin:'0 auto', overflowX:'clip'  }} >
       <Container maxWidth="xl">
         <Toolbar disableGutters> {/* Desktop rocoo icon */}
+          <Box onClick={handleHomeClick} display='flex' alignItems='center' sx={{flexGrow:1,cursor: 'pointer'}}>
           <AdbIcon sx={{ display: { xs: 'none', lg: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'none', lg: 'flex' },
               fontFamily: 'monospace',
-              flexGrow: '1',
+              // flexGrow: '1',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -49,14 +77,14 @@ function Navbar() {
           >
             Rocco
           </Typography>
-
+</Box>
          {/* Mobile rocoo icon */}
+         <Box onClick={handleHomeClick}>
           <AdbIcon sx={{ display: { xs: 'flex', lg: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'flex', lg: 'none' },
@@ -69,8 +97,9 @@ function Navbar() {
           >
             Rocco
           </Typography>
+          </Box>
           {/* Desktop menu items */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -80,7 +109,51 @@ function Navbar() {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> */}
+
+
+ <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}>
+      <Button
+        onClick={handleHomeClick}
+        sx={{ my: 2, color: 'inherit', display: 'block', ":hover": { color: 'blue', background: 'none' } }}
+      >
+        H.
+      </Button>
+      <Button
+        onClick={handleSolutionsClick}
+        sx={{ my: 2, color: 'inherit', display: 'block', ":hover": { color: 'blue', background: 'none' } }}
+      >
+        Solutions
+      </Button>
+      <Button
+        onClick={handleCompanyClick}
+        sx={{ my: 2, color: 'inherit', display: 'block', ":hover": { color: 'blue', background: 'none' } }}
+      >
+        Company
+      </Button>
+      <Button
+        onClick={handleCaseStudiesClick}
+        sx={{ my: 2, color: 'inherit', display: 'block', ":hover": { color: 'blue', background: 'none' } }}
+      >
+        Case Studies
+      </Button>
+      <Button
+        onClick={handleBlogClick}
+        sx={{ my: 2, color: 'inherit', display: 'block', ":hover": { color: 'blue', background: 'none' } }}
+      >
+        Blog
+      </Button>
+      <Button
+        onClick={handleResourcesClick}
+        sx={{ my: 2, color: 'inherit', display: 'block', ":hover": { color: 'blue', background: 'none' } }}
+      >
+        Resources
+      </Button>
+    </Box>
+
+
+
+
           <Box sx={{ display: {xs:'none',lg:'flex'}, flexDirection: 'column' }}>
             <Button sx={{ height: '20px', fontSize: '10px', color: 'black', bgcolor: 'rgb(245, 240, 240)' }}>
               {'Client Support'}<ArrowForwardIcon sx={{fontSize:'10px'}}/>
