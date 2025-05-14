@@ -11,7 +11,8 @@ import {
 import b1 from "../../assets/b1.webp";
 import b2 from "../../assets/b2.webp";
 import b3 from "../../assets/b3.webp";
-import b4 from "../../assets/b5.webp";
+import b4 from "../../assets/b4.webp";
+import b5 from "../../assets/b5.webp";
 import b6 from "../../assets/b6.webp";
 import b7 from "../../assets/b7.webp";
 import b8 from "../../assets/b8.webp";
@@ -19,6 +20,7 @@ import b9 from "../../assets/b9.webp";
 import b10 from "../../assets/b10.webp";
 import blogmain from "../../assets/blog-main.webp";
 import React from "react";
+import Contact from "../Contact/Form";
 const Blog = () => {
   const cardData = [
     {
@@ -59,7 +61,39 @@ const Blog = () => {
         "Strategic Move to an AI-supported application for Public Safety Travel App in London",
       description:
         "Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.",
+      image: b5,
+    },
+    {
+        niche:"Development",
+      title:
+        "Strategic Move to an AI-supported application for Public Safety Travel App in London",
+      description:
+        "Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.",
       image: b6,
+    },
+    {
+        niche:"Development",
+      title:
+        "Strategic Move to an AI-supported application for Public Safety Travel App in London",
+      description:
+        "Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.",
+      image: b7,
+    },
+    {
+        niche:"Development",
+      title:
+        "Strategic Move to an AI-supported application for Public Safety Travel App in London",
+      description:
+        "Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.",
+      image: b8,
+    },
+    {
+        niche:"Development",
+      title:
+        "Strategic Move to an AI-supported application for Public Safety Travel App in London",
+      description:
+        "Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.",
+      image: b9,
     },
   ];
   return (
@@ -197,7 +231,8 @@ const Blog = () => {
           >
             <CardMedia
               component="img"
-              height="200"
+            //   height="200"
+            height="auto"
               image={card.image}
               alt="green iguana"
               sx={{ borderRadius: "10px" }}
@@ -259,7 +294,7 @@ const Blog = () => {
                   },
                 }}
               >
-                Learn More
+                Read More
               </Button>
             </CardActions>
           </Card>
@@ -267,6 +302,7 @@ const Blog = () => {
       </Box>
       </Box>
       </Box>
+      <Contact />
     </>
   );
 };
