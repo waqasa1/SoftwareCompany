@@ -9,6 +9,7 @@ import Case from "./CaseStudies/Case";
 import Blog from "./Home/Blog";
 import ContactPage from './Contact/Contactp'
 import Solution from "./Solution/Solution";
+import Hero from './WebDev/Hero'
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
       <Route path="/case-studies" element={<Case/>} />
       <Route path="/contact" element={<ContactPage/>} />
       <Route path="/solution" element={<Solution />}/>
+      <Route path="/herodev" element={<Hero/>} />
       </Route>
     </Routes>
     </>
