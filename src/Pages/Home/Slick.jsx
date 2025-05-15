@@ -132,7 +132,7 @@ const Slick = () => {
                   >
                     {card.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', fontSize:'16px', marginTop:'10px',color:"#f5f5e8"}}>
+                  <Typography variant="body2" sx={{ fontSize:'16px', marginTop:'10px',color:"#f5f5e8"}}>
                     {card.description}
                   </Typography>
                 </CardContent>
@@ -141,7 +141,6 @@ const Slick = () => {
                     sx={{
                       fontSize: '10px',
                       textTransform: 'none',
-                      color: 'black',
                       fontWeight: '600',
                       position: 'relative',
                       color:"#f5f5e8",
