@@ -39,8 +39,7 @@ function Navbar() {
   };
 
   const handleSolutionsClick = () => {
-    // Handle Solutions click logic
-    console.log("Solutions clicked");
+    navigate("/solution")
   };
 
   const handleCompanyClick = () => {
@@ -57,8 +56,7 @@ function Navbar() {
   };
 
   const handleResourcesClick = () => {
-    // Handle Resources click logic
-    console.log("Resources clicked");
+   navigate("/contact")
   };
 
   return (
