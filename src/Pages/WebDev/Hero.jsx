@@ -9,6 +9,8 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import Performance from './Perfomance';
+import Otters from './Otters';
 
 
 const Hero = () => {
@@ -499,6 +501,9 @@ const Hero = () => {
                     </Box>
                 </Box>
             </Box>
+            <Performance />
+            <Otters />
+
         </>
     )
 }

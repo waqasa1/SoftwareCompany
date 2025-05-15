@@ -43,8 +43,7 @@ function Navbar() {
   };
 
   const handleCompanyClick = () => {
-    // Handle Company click logic
-    console.log("Company clicked");
+    navigate("/herodev")
   };
 
   const handleCaseStudiesClick = () => {
