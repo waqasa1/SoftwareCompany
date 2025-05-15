@@ -15,8 +15,14 @@ import cost from "../../assets/Cost-effectiveness.svg";
 import innovative from "../../assets/Innovative.svg";
 import Scalability from "../../assets/Scalability.svg";
 import Industry from "../../assets/Industry.svg";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
+  const handleService =() =>{
+    navigate("/solution")
+  }
   const cardData = [
     {
       title: "Managed Services",
@@ -101,7 +107,7 @@ const HeroSection = () => {
             >
               Schedule a Free Consultation
             </Button>
-            <Button variant="contained" sx={{ textTransform: "none" }}>
+            <Button onClick={handleService} variant="contained" sx={{ textTransform: "none" }}>
               Services
             </Button>
           </Box>
@@ -528,6 +534,7 @@ const HeroSection = () => {
             }}
           >
             <Button
+              onClick={handleService}
               variant="contained"
               sx={{
                 textTransform: "none",
