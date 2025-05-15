@@ -11,6 +11,7 @@ import ContactPage from './Contact/Contactp'
 import Solution from "./Solution/Solution";
 import Hero from './WebDev/Hero'
 import Otters from "./WebDev/Otters";
+import Performance from "./WebDev/Perfomance";
 
 const AppRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const AppRoutes = () => {
       <Route path="/solution" element={<Solution />}/>
       <Route path="/herodev" element={<Hero/>} />
       <Route path="/otter" element={<Otters />} />
+      <Route path="/performance" element={<Performance />} />
       </Route>
     </Routes>
     </>
