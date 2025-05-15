@@ -10,6 +10,7 @@ import Blog from "./Home/Blog";
 import ContactPage from './Contact/Contactp'
 import Solution from "./Solution/Solution";
 import Hero from './WebDev/Hero'
+import Otters from "./WebDev/Otters";
 
 const AppRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const AppRoutes = () => {
       <Route path="/contact" element={<ContactPage/>} />
       <Route path="/solution" element={<Solution />}/>
       <Route path="/herodev" element={<Hero/>} />
+      <Route path="/otter" element={<Otters />} />
       </Route>
     </Routes>
     </>
