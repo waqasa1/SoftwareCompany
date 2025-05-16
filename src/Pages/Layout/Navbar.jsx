@@ -14,14 +14,17 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link, useNavigate } from "react-router-dom";
 
 const pages = [
-  "H.",
-  "Solutions",
-  "Company",
-  "Case Studies",
-  "Blog",
-  "Resources",
+  { label: "H.", path: "/" },
+  { label: "Solutions", path: "/solution" },
+  { label: "Company", path: "/herodev" },
+  { label: "Case Studies", path: "/case-studies" },
+  { label: "Blog", path: "/blog" },
+  { label: "Resources", path: "/contact" },
 ];
-{/* navbar */}
+
+{
+  /* navbar */
+}
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -38,24 +41,9 @@ function Navbar() {
     navigate("/");
   };
 
-  const handleSolutionsClick = () => {
-    navigate("/solution")
-  };
-
-  const handleCompanyClick = () => {
-    navigate("/herodev")
-  };
-
-  const handleCaseStudiesClick = () => {
-    navigate("/case-studies");
-  };
-
-  const handleBlogClick = () => {
-    navigate("/blog");
-  };
-
-  const handleResourcesClick = () => {
-   navigate("/contact")
+  const handleNavClick = (path) => {
+    navigate(path);
+    setAnchorElNav(null);
   };
 
   return (
@@ -124,84 +112,21 @@ function Navbar() {
             </Typography>
           </Box>
           {/* Desktop menu items */}
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block', ":hover":{color:'blue', background:'none'} }}
+                key={page.label}
+                onClick={() => handleNavClick(page.path)}
+                sx={{
+                  my: 2,
+                  color: "inherit",
+                  display: "block",
+                  ":hover": { color: "blue", background: "none" },
+                }}
               >
-                {page}
+                {page.label}
               </Button>
             ))}
-          </Box> */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
-            <Button
-              onClick={handleHomeClick}
-              sx={{
-                my: 2,
-                color: "inherit",
-                display: "block",
-                ":hover": { color: "blue", background: "none" },
-              }}
-            >
-              H.
-            </Button>
-            <Button
-              onClick={handleSolutionsClick}
-              sx={{
-                my: 2,
-                color: "inherit",
-                display: "block",
-                ":hover": { color: "blue", background: "none" },
-              }}
-            >
-              Solutions
-            </Button>
-            <Button
-              onClick={handleCompanyClick}
-              sx={{
-                my: 2,
-                color: "inherit",
-                display: "block",
-                ":hover": { color: "blue", background: "none" },
-              }}
-            >
-              Company
-            </Button>
-            <Button
-              onClick={handleCaseStudiesClick}
-              sx={{
-                my: 2,
-                color: "inherit",
-                display: "block",
-                ":hover": { color: "blue", background: "none" },
-              }}
-            >
-              Case Studies
-            </Button>
-            <Button
-              onClick={handleBlogClick}
-              sx={{
-                my: 2,
-                color: "inherit",
-                display: "block",
-                ":hover": { color: "blue", background: "none" },
-              }}
-            >
-              Blog
-            </Button>
-            <Button
-              onClick={handleResourcesClick}
-              sx={{
-                my: 2,
-                color: "inherit",
-                display: "block",
-                ":hover": { color: "blue", background: "none" },
-              }}
-            >
-              Resources
-            </Button>
           </Box>
           <Box
             sx={{
@@ -273,8 +198,13 @@ function Navbar() {
               sx={{ display: { xs: "block", lg: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                <MenuItem
+                  key={page.label}
+                  onClick={() => handleNavClick(page.path)}
+                >
+                  <Typography sx={{ textAlign: "center" }}>
+                    {page.label}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
