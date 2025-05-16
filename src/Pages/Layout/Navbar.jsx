@@ -35,7 +35,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
-    navigate("/hero");
+    navigate("/");
   };
 
   const handleSolutionsClick = () => {

@@ -20,9 +20,8 @@ const AppRoutes = () => {
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<Layout />}>
-      <Route index element={<Contact />} />
       <Route path="/slick" element={<Slick/>}/>
-      <Route path="/hero" element={<Home/>}/>
+      <Route index element={<Home/>}/>
       <Route path="/blog" element={<Blog />}/>
       <Route path="/slider" element={<Testimonials/>} />
       <Route path="/case-studies" element={<Case/>} />
