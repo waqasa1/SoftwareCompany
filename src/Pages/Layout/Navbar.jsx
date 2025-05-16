@@ -135,17 +135,6 @@ function Navbar() {
             }}
           >
             <Button
-              sx={{
-                height: "20px",
-                fontSize: "10px",
-                color: "black",
-                bgcolor: "rgb(245, 240, 240)",
-              }}
-            >
-              {"Client Support"}
-              <ArrowForwardIcon sx={{ fontSize: "10px" }} />
-            </Button>
-            <Button
               href="tel:+923034291974"
               color="black"
               sx={{
