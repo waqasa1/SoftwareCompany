@@ -21,7 +21,7 @@ const pages = [
   "Blog",
   "Resources",
 ];
-
+{/* navbar */}
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -281,6 +281,7 @@ function Navbar() {
           </Box>
         </Toolbar>
       </Container>
+      {/* navbar */}
     </AppBar>
   );
 }
