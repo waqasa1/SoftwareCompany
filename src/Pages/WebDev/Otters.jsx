@@ -34,6 +34,8 @@ function Otters() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
+     speed: 500, 
+  cssEase: "ease-in-out",
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,

@@ -176,9 +176,10 @@ function Performance() {
             },
             margin: "0 auto",
             display: "flex",
+            height:"auto",
             alignItems: "center",
             justifyContent: "space-evenly",
-
+            py:2,
             flexDirection: { xs: "column", lg: "row" },
           }}
         >
@@ -192,7 +193,7 @@ function Performance() {
           />
           <Box
             sx={{
-              width: "50%",
+              width: {xs:"80%", lg:"50%"},
               display: "flex",
               flexDirection: "column",
               gap: 1,
