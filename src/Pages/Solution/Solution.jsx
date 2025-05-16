@@ -19,28 +19,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 function Solution() {
   const navigate = useNavigate();
-  const handleResource = () =>{
+  const handleResource = () => {
     navigate('/contact')
   }
   const cardData = [
-    {
-      title: "Managed Services",
-      description:
-        "Free up your internal resources to focus on the business by letting us handle day-to-day support services.",
-      image: Scalability,
-    },
-    {
-      title: "Cloud Solutions",
-      description:
-        "Optimize your infrastructure with scalable and secure cloud solutions.",
-      image: innovative,
-    },
-    {
-      title: "Cybersecurity",
-      description:
-        "Protect your business with enterprise-grade security solutions and monitoring.",
-      image: Industry,
-    },
     {
       title: "Web Development",
       description:
@@ -57,6 +39,24 @@ function Solution() {
       title: "Cloud Services",
       description:
         "With our expertise in cloud technologies, we can help you find the right cloud solutions that meet your business needs and goals.",
+      image: Industry,
+    },
+    {
+      title: "Managed Services",
+      description:
+        "Free up your internal resources to focus on the business by letting us handle day-to-day support services.",
+      image: Scalability,
+    },
+    {
+      title: "Cloud Solutions",
+      description:
+        "Optimize your infrastructure with scalable and secure cloud solutions.",
+      image: innovative,
+    },
+    {
+      title: "Cybersecurity",
+      description:
+        "Protect your business with enterprise-grade security solutions and monitoring.",
       image: Industry,
     },
   ];
@@ -272,7 +272,7 @@ function Solution() {
                 specific needs to match your specific goals.
               </Typography>
               <Button
-              onClick={handleResource}
+                onClick={handleResource}
                 sx={{
                   fontSize: "12px",
                   textTransform: "none",

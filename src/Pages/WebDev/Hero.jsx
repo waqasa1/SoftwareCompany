@@ -163,72 +163,20 @@ const Hero = () => {
         },
         {
             image: 'https://www.digitalotters.com/wp-content/uploads/2024/05/Corporate-SEO-icon.webp',
-            title: "Fintech",
+            title: "Cryptocurrency",
             description:
-                "Meeting modern industry standards, we plan Fintech projects with financial professionals and our developing experts.",
+                "Expertise in building decentralized applications and smart contracts for DeFi and NFT solutions.",
         },
     ];
     return (
         <>
             {/* -----------------------------Hero Section--------------------*/}
-            <Box sx={{ display: "flex", width: { lg: "80%" }, margin: "20px auto", px: "20px", }}>
+            <Box sx={{ display: "flex", width: { lg: "80%" }, margin: "20px auto", px: "20px",height:'80dvh' }}>
                 <Box sx={{ display: 'flex', flexDirection: { xs: 'column-reverse', lg: 'row' }, width: '100%', py: '20px', alignItems: { xs: ' ', lg: 'center' } }}>
                     <Box sx={{ width: { lg: '50%' } }}>
                         <Typography sx={{ fontSize: { xs: '30px', lg: '60px' }, fontWeight: '700', letterSpacing: '0px', color: '#0A0D31', lineHeight: '1em', marginTop: '10px' }}>Top Web Development Services Agency</Typography>
-                        <Typography sx={{ fontSize: '1rem', color: 'gray', marginTop: '10px' }}>Evolve your digital presence with 360 web development services focused on creating a solid online presence. Digital Otters transform your ideas into working websites with a next-generation tech stack improving ROIs massively.</Typography>
-                        <Box sx={{ paddingRight: '100px', marginTop: '10px' }} >
-                            <Slider {...settings}>
-                                {logos.map((logo, index) => (
-                                    <Box key={index} >
-                                        <img src={logo} alt={'logo'} style={{ height: '50px', width: '50px' }} />
-                                    </Box>
-                                ))}
-                            </Slider>
-                        </Box>
-                        <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '10px' }}>Get a Free Quote</Button>
-                        <Typography sx={{ marginTop: '10px' }}>RECOGNIZED BY:</Typography>
-                        <Box sx={{ display: 'flex', gap: '20px', mt: '10px' }}>
-                            <Box sx={{ mb: 2 }}>
-                                <Box>
-                                    Reviewed on
-                                    <Rating
-                                        name="read-only"
-                                        value={5}
-                                        readOnly
-                                        sx={{ marginLeft: "10px" }}
-                                        size="small"
-                                    />
-                                </Box>
-                                <Box>
-                                    {" "}
-                                    <img
-                                        src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/clutch-logo.svg"
-                                        alt="logo"
-                                        style={{ maxWidth: "80px", marginRight: "10px" }}
-                                    />
-                                    100+ reviews
-                                </Box>
-                            </Box>
-                            <Box sx={{ mb: 2 }}>
-                                <Box>
-                                    <Rating
-                                        name="read-only"
-                                        value={5}
-                                        readOnly
-                                        sx={{ marginLeft: "10px" }}
-                                        size="small"
-                                    />
-                                </Box>
-                                <Box sx={{ marginTop: '8px', marginLeft: '10px' }}>
-                                    {" "}
-                                    <img
-                                        src="https://vectorseek.com/wp-content/uploads/2023/09/Goodfirms-Logo-Vector.svg-.png"
-                                        alt="logo"
-                                        style={{ maxWidth: "100px", marginRight: "10px" }}
-                                    />
-                                </Box>
-                            </Box>
-                        </Box>
+                        <Typography sx={{ fontSize: '1rem', color: 'gray', marginTop: '30px' }}>Evolve your digital presence with 360 web development services focused on creating a solid online presence. Digital Otters transform your ideas into working websites with a next-generation tech stack improving ROIs massively.</Typography>
+                        <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '30px' }}>Get a Free Quote</Button>
                     </Box>
                     <Box sx={{ width: { lg: '50%' }, margin: '0 auto' }}>
                         <Box component="img" src="https://www.digitalotters.com/wp-content/uploads/2024/05/secured-web-development-1024x659-1.png" alt="" sx={{ width: { xs: '300px', lg: '500px' }, height: 'auto' }} />
@@ -261,16 +209,16 @@ const Hero = () => {
                         <Typography sx={{ width: '50%', textAlign: 'center', marginTop: '5px', color: 'white' }}>Shopify Development</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <img src="https://www.digitalotters.com/wp-content/uploads/2024/05/MAGENTO-1.png" alt="" height={50} width={50} />
-                        <Typography sx={{ width: '50%', textAlign: 'center', marginTop: '5px', color: 'white' }}>Magento Development</Typography>
+                        <img src="https://img.icons8.com/?size=100&id=0Da6k7SMq0hs&format=png&color=FFFFFF" alt="" height={50} width={50} />
+                        <Typography sx={{ width: '50%', textAlign: 'center', marginTop: '5px', color: 'white' }}>React Development</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <img src="https://www.digitalotters.com/wp-content/uploads/2024/05/wordpress.png" alt="" height={50} width={50} />
                         <Typography sx={{ width: '50%', textAlign: 'center', marginTop: '5px', color: 'white' }}>WordPress Development</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <img src="https://www.digitalotters.com/wp-content/uploads/2024/05/python.png" alt="" height={50} width={50} />
-                        <Typography sx={{ width: '50%', textAlign: 'center', marginTop: '5px', color: 'white' }}>Python Development</Typography>
+                        <img src="https://img.icons8.com/?size=100&id=FQlr_bFSqEdG&format=png&color=FFFFFF" alt="" height={50} width={50} />
+                        <Typography sx={{ width: '50%', textAlign: 'center', marginTop: '5px', color: 'white' }}>Node Development</Typography>
                     </Box>
                 </Box>
             </Box>
@@ -427,6 +375,7 @@ const Hero = () => {
                     </Box>
                 </Box>
             </Box>
+            {/*----------------grayscale images-----------------------*/}
             <Box sx={{ backgroundColor: "#1976d2", px: '20px', py: { xs: '20px', lg: '80px' } }}>
                 <Box>
                     <Typography sx={{ textAlign: 'center', fontSize: '36px', color: 'white', marginBottom: '20px' }}>Websites We've Built</Typography>
@@ -449,9 +398,11 @@ const Hero = () => {
                                 width: { xs: '80%', sm: '30%' },
                                 height: 'auto',
                                 filter: 'grayscale(100%)',
-                                transition: 'filter 0.3s ease',
+                                transition: 'filter 0.3s ease, transform 0.3s ease',
                                 '&:hover': {
                                     filter: 'grayscale(0%)',
+                                    transform: 'scale(1.2)',
+                                    zIndex:'1500'
                                 },
                             }}
                         />
@@ -491,7 +442,7 @@ const Hero = () => {
                                     "&:hover .hover-text": {
                                         color: "blue",
                                     },
-                                    height: 'fit-content'
+                                    height: 'auto'
                                 }}
                             >
                                 <CardContent sx={{ minHeight: "120px" }}>

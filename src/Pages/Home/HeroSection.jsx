@@ -28,24 +28,6 @@ const HeroSection = () => {
   };
   const cardData = [
     {
-      title: "Managed Services",
-      description:
-        "Free up your internal resources to focus on the business by letting us handle day-to-day support services.",
-      image: Scalability,
-    },
-    {
-      title: "Cloud Solutions",
-      description:
-        "Optimize your infrastructure with scalable and secure cloud solutions.",
-      image: innovative,
-    },
-    {
-      title: "Cybersecurity",
-      description:
-        "Protect your business with enterprise-grade security solutions and monitoring.",
-      image: Industry,
-    },
-    {
       title: "Web Development",
       description:
         "Our web development services can help you establish an impactful online presence and reach your target audience effectively.",
@@ -63,6 +45,24 @@ const HeroSection = () => {
         "With our expertise in cloud technologies, we can help you find the right cloud solutions that meet your business needs and goals.",
       image: Industry,
     },
+        {
+      title: "Managed Services",
+      description:
+        "Free up your internal resources to focus on the business by letting us handle day-to-day support services.",
+      image: Scalability,
+    },
+    {
+      title: "Cloud Solutions",
+      description:
+        "Optimize your infrastructure with scalable and secure cloud solutions.",
+      image: innovative,
+    },
+    {
+      title: "Cybersecurity",
+      description:
+        "Protect your business with enterprise-grade security solutions and monitoring.",
+      image: Industry,
+    }
   ];
   return (
     <>
@@ -152,39 +152,9 @@ const HeroSection = () => {
           marginBottom: "50px",
         }}
       >
-        <Box sx={{ width: { xs: "100%", lg: "20%" }, mb: 2 }}>
-          <Box>
-            Reviewed on
-            <Rating
-              name="read-only"
-              value={5}
-              readOnly
-              sx={{ color: "red", marginLeft: "10px" }}
-              size="small"
-            />
-          </Box>
-          <Box>
-            {" "}
-            <img
-              src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/clutch-logo.svg"
-              alt="logo"
-              style={{ maxWidth: "80px", marginRight: "10px" }}
-            />
-            31 reviews
-          </Box>
-        </Box>
-        <Divider
-          sx={{
-            width: "80%",
-            margin: "0 auto",
-            mb: "20px",
-            display: { xs: "block", lg: "none" },
-          }}
-        />
         <Box sx={{ width: { xs: "50%", lg: "20%" }, mb: 2 }}>
           <Typography
             sx={{
-              borderLeft: "2px solid gray",
               paddingLeft: "10px",
               fontWeight: "700",
               fontSize: "20px",
@@ -266,7 +236,7 @@ const HeroSection = () => {
             flexDirection: "column",
             alignItems: "start",
             width: "50%",
-            justifyContent: "space-between",
+            justifyContent: "start",
           }}
         >
           <Button
@@ -297,7 +267,8 @@ const HeroSection = () => {
             style={{
               transform: "rotate(-90deg)",
               height: "220px",
-              marginTop: "10px",
+              marginTop: "30px",
+              marginRight:'20px'
             }}
           />
         </Box>
