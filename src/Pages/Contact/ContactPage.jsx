@@ -53,7 +53,9 @@ const ContactPage = () => {
                             }}>
                                 {'(817) 575-6220'}
                             </Button>
-                            <Button sx={{
+                            <Button
+                            onClick={()=>window.open(`https://www.google.com/maps/place/28200+Old+41+Rd+%23208,+Bonita+Springs,+FL+34135,+USA/@26.3286151,-81.7834777,17z/data=!3m1!4b1!4m6!3m5!1s0x88db1980fda97993:0x19955ffaffb85928!8m2!3d26.3286151!4d-81.781289!16s%2Fg%2F11mbm_j9l_?q=28200+Old+41+Rd+%23208+Bonita+Springs,+FL+34135&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjiz9Ozvo3-AhWlSvEDHcniATYQ_AUoAXoECCwQAw&coh=164777&entry=tt&shorturl=1`, '_blank')}
+                             sx={{
                                 fontSize: '12px', textTransform: 'none', color: 'blue', fontWeight: 'bold', marginLeft: '-5px',
                                 ":hover": {
                                     color: 'black',
@@ -92,7 +94,9 @@ const ContactPage = () => {
                             }}>
                                 {'(404) 551-52222'}
                             </Button>
-                            <Button sx={{
+                            <Button
+                            onClick={()=>window.open(`https://www.google.com/maps/place/3565+Piedmont+Rd+NE+Building+2,+Suite+200,+Atlanta,+GA+30305,+USA/@33.8525078,-84.3817183,17z/data=!3m1!4b1!4m5!3m4!1s0x88f50fb1e1ba1fbb:0xe6492b96ce846a2a!8m2!3d33.8525078!4d-84.3795296?coh=164777&entry=tt&shorturl=1`, '_blank')}
+                             sx={{
                                 fontSize: '12px', textTransform: 'none', color: 'blue', fontWeight: 'bold', marginLeft: '-5px',
                                 ":hover": {
                                     color: 'black',
@@ -130,7 +134,9 @@ const ContactPage = () => {
                             }}>
                                 {'(325) 221-9900'}
                             </Button>
-                            <Button sx={{
+                            <Button 
+                            onClick={()=>window.open(`https://www.google.com/maps/place/12421+W+151st+St+%23100,+Olathe,+KS+66062,+USA/@38.8548979,-94.8082158,17z/data=!3m1!4b1!4m5!3m4!1s0x87c0be797eef7223:0xff46f90ba3534df2!8m2!3d38.8548979!4d-94.8060271?q=12421+W.+151st+St.,+Suite+100+Olathe,+KS+66000&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjMsq_Dv43-AhX6QPEDHR9kAvUQ_AUoAXoECAEQAw&coh=164777&entry=tt&shorturl=1`, '_blank')}
+                            sx={{
                                 fontSize: '12px', textTransform: 'none', color: 'blue', fontWeight: 'bold', marginLeft: '-5px',
                                 ":hover": {
                                     color: 'black',

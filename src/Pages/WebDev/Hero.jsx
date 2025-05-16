@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     Box, Typography, Button, Rating, Card,
     CardMedia,
@@ -11,9 +11,28 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import Performance from './Perfomance';
 import Otters from './Otters';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Hero = () => {
+    const navigate = useNavigate();
+    const handleContact = () => {
+        navigate("/contact")
+    }
+
+    const location = useLocation();
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace('#', '');
+            const element = document.getElementById(id);
+            if (element) {
+                // Timeout ensures the DOM has mounted
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [location]);
     const cardData = [
         {
             title: "Custom Website Development",
@@ -166,7 +185,7 @@ const Hero = () => {
                                 ))}
                             </Slider>
                         </Box>
-                        <Button variant='contained' disableElevation sx={{ marginTop: '10px' }}>Get a Free Quote</Button>
+                        <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '10px' }}>Get a Free Quote</Button>
                         <Typography sx={{ marginTop: '10px' }}>RECOGNIZED BY:</Typography>
                         <Box sx={{ display: 'flex', gap: '20px', mt: '10px' }}>
                             <Box sx={{ mb: 2 }}>
@@ -328,6 +347,7 @@ const Hero = () => {
                         }}
                     >
                         <Button
+                            onClick={() => navigate('/solution')}
                             variant="contained"
                             sx={{
                                 textTransform: "none",
@@ -344,7 +364,7 @@ const Hero = () => {
                 <Box sx={{ gap: '30px', justifyItems: 'center', py: { xs: '20px', lg: '80px' } }}>
                     <Typography sx={{ fontSize: '36px', color: 'white', marginBottom: '20px' }}>Have a Project? Let's Discuss</Typography>
                     <Typography sx={{ textAlign: { xs: 'left', lg: 'center' }, width: { lg: '80%' }, color: 'white' }}>Let’s elevate your digital presence with a website that speaks your brand the way you want. From custom web development services, you can have a digital portfolio, corporate website, or an online store. Convert your ideas, and designs into a functional dynamic website.</Typography>
-                    <Button variant='contained' disableElevation sx={{  backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
+                    <Button onClick={handleContact} variant='contained' disableElevation sx={{ backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
                 </Box>
             </Box>
             {/*---------Webdev Services Section-------------*/}
@@ -375,7 +395,7 @@ const Hero = () => {
                         <Box sx={{ width: { lg: '50%' } }}>
                             <Typography sx={{ fontSize: { xs: '30px', lg: '1.8em' }, fontWeight: '700', letterSpacing: '0px', color: '#0A0D31', lineHeight: '1em', marginTop: '10px' }}>Frontend Development</Typography>
                             <Typography sx={{ fontSize: '1rem', color: 'gray', marginTop: '20px' }}>Seamless frontend development on top-notch tech stacks, or content management systems. As a website development agency, we focus on visually stunning websites, web applications, and more for all our clients. To blend creativity and functionality with the design, our skilled developers engage in creating the best user experience for every website visitor.</Typography>
-                            <Button variant='contained' disableElevation sx={{ marginTop: '20px' }}>Get a Free Quote</Button>
+                            <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '20px' }}>Get a Free Quote</Button>
                         </Box>
                         <Box sx={{ width: { lg: '50%' }, margin: '0 auto' }}>
                             <Box component="img" src="https://www.digitalotters.com/wp-content/uploads/2024/06/otter-logo-07-_1_-1.webp" alt="" sx={{ width: { xs: '300px', lg: '500px' }, height: 'auto' }} />
@@ -390,7 +410,7 @@ const Hero = () => {
                         <Box sx={{ width: { lg: '50%' } }}>
                             <Typography sx={{ fontSize: { xs: '30px', lg: '1.8em' }, fontWeight: '700', letterSpacing: '0px', color: '#0A0D31', lineHeight: '1em', marginTop: '10px' }}>Backend Development</Typography>
                             <Typography sx={{ fontSize: '1rem', color: 'gray', marginTop: '20px' }}>A strong backbone of the website or web app is what makes your web development reliable. With a focus on reliability and performance, backend development can be customized with front-end development and designs. Every web application and website has a tech stack that covers all possible functionalities required by the brand, selected by our team of professionals.</Typography>
-                            <Button variant='contained' disableElevation sx={{ marginTop: '20px' }}>Get a Free Quote</Button>
+                            <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '20px' }}>Get a Free Quote</Button>
                         </Box>
                     </Box>
                 </Box>
@@ -399,7 +419,7 @@ const Hero = () => {
                         <Box sx={{ width: { lg: '50%' } }}>
                             <Typography sx={{ fontSize: { xs: '30px', lg: '1.8em' }, fontWeight: '700', letterSpacing: '0px', color: '#0A0D31', lineHeight: '1em', marginTop: '10px' }}>Fullstack Web Development</Typography>
                             <Typography sx={{ fontSize: '1rem', color: 'gray', marginTop: '20px' }}>Our full stack development services focus not only frontend and backend development but also on API Integrations, database management and more. With efficient, secure and scalable development, our web development services are focused on end-user experience as much as its focused on clients satisfaction.</Typography>
-                            <Button variant='contained' disableElevation sx={{ marginTop: '20px' }}>Get a Free Quote</Button>
+                            <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '20px' }}>Get a Free Quote</Button>
                         </Box>
                         <Box sx={{ width: { lg: '50%' }, margin: '0 auto' }}>
                             <Box component="img" src="https://www.digitalotters.com/wp-content/uploads/2024/06/full-stack.webp" alt="" sx={{ width: { xs: '300px', lg: '500px' }, height: 'auto' }} />
@@ -439,14 +459,14 @@ const Hero = () => {
                 </Box>
             </Box>
             {/*--------------Industries We Cater-----------------------*/}
-            <Box >
+            <Box id="industries-section" >
                 <Box sx={{ width: { lg: "80%" }, margin: "0 auto", py: '50px', display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, alignItems: { xs: 'center', lg: 'stretch' } }}>
                     <Box sx={{ width: { xs: '80%', lg: '30%' }, height: 'auto', backgroundColor: '#f5f5f5', padding: '20px' }}>
                         <Typography sx={{ fontSize: '30px' }}>Industries We Cater</Typography>
                         <Typography sx={{ marginTop: '10px' }}>Top-notch Web Development Services</Typography>
                         <Typography sx={{ marginTop: '10px', fontSize: '17px' }}>Utilizing a collection of top-notch programming and developing languages, we have successfully catered to more than 15 different sectors. Some of our latest works are related to Edtech, Fintech, Real Estate, and Healthcare sectors. We Focus on performance, scalability, continuous improvements, and ease of use as the core elements of our development services.</Typography>
                         <Typography sx={{ marginTop: '50px', fontSize: '17px' }}>Have a web development project in mind? Let us help you out with all your frontend, backend and full-stack development.</Typography>
-                        <Button variant='contained' disableElevation sx={{ marginTop: '10px', backgroundColor: 'black' }}>Get a Free Quote</Button>
+                        <Button onClick={handleContact} variant='contained' disableElevation sx={{ marginTop: '10px', backgroundColor: 'black' }}>Get a Free Quote</Button>
                     </Box>
                     <Box
                         sx={{
@@ -480,7 +500,7 @@ const Hero = () => {
                                         src={card.image}
                                         height="50"
                                         width="50"
-                                        style={{ paddingLeft: "20px", marginLeft:'-20px', marginBottom:'10px' }}
+                                        style={{ paddingLeft: "20px", marginLeft: '-20px', marginBottom: '10px' }}
                                     />
                                     <Typography
                                         gutterBottom
@@ -501,12 +521,12 @@ const Hero = () => {
                     </Box>
                 </Box>
             </Box>
-             {/*----------Lets discuss the future? Section -----------------*/}
+            {/*----------Lets discuss the future? Section -----------------*/}
             <Box sx={{ backgroundColor: "#1976d2", height: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', px: '20px' }}>
                 <Box sx={{ gap: '30px', justifyItems: 'center', py: { xs: '20px', lg: '80px' } }}>
                     <Typography sx={{ fontSize: '36px', color: 'white', marginBottom: '20px' }}>Let's Discuss The Future of Your Web Presence</Typography>
                     <Typography sx={{ textAlign: { xs: 'left', lg: 'center' }, width: { lg: '80%' }, color: 'white' }}>With pricing custom to you, your project, and your requirements feel free to contact us for a web development proposal. Let’s discuss and strategize your digital presence on the web with your digital portfolio, your website</Typography>
-                    <Button variant='contained' disableElevation sx={{  backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
+                    <Button onClick={handleContact} variant='contained' disableElevation sx={{ backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
                 </Box>
             </Box>
             {/*-------------------*/}

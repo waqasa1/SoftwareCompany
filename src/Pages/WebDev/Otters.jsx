@@ -25,7 +25,13 @@ import x from "../../assets/X.webp";
 import youtube from "../../assets/youtube-1.webp";
 import Gpt from "../../assets/gptvs.jpg";
 import Cat from "../../assets/otters-cat.jpg";
+import { useNavigate } from "react-router-dom";
 function Otters() {
+  const navigate = useNavigate();
+  const handleContact = () => {
+    navigate("/contact")
+  }
+
   const images1 = [Ahsan, Arshad, Sameen, Shazaib, Social, Ahsan];
   const images2 = [Sameen, Shazaib, Social, Arshad, Sameen, Ahsan];
 
@@ -34,8 +40,8 @@ function Otters() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
-     speed: 500, 
-  cssEase: "ease-in-out",
+    speed: 500,
+    cssEase: "ease-in-out",
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -251,6 +257,7 @@ function Otters() {
 
               <CardActions>
                 <Button
+                onClick={handleContact}
                   sx={{
                     position: "relative",
                   }}
@@ -306,6 +313,7 @@ function Otters() {
                 customers, and users.
               </Typography>
               <Button
+               onClick={handleContact}
                 variant="contained"
                 sx={{ maxHeight: "30px", textTransform: "none" }}
               >

@@ -23,6 +23,9 @@ const HeroSection = () => {
   const handleService =() =>{
     navigate("/solution")
   }
+    const handleClick = () => {
+    navigate('/herodev#industries-section');
+  };
   const cardData = [
     {
       title: "Managed Services",
@@ -389,6 +392,7 @@ const HeroSection = () => {
       />
       <Box sx={{ width: { lg: "80%" }, margin: "0 auto" }}>
         <Button
+        onClick={()=>navigate('/herodev')}
           sx={{
             fontSize: "12px",
             textTransform: "none",
@@ -650,6 +654,7 @@ const HeroSection = () => {
             </Box>
           </Box>
           <Button
+          onClick={handleClick}
             sx={{
               fontSize: "12px",
               textTransform: "none",

@@ -13,7 +13,12 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 function Performance() {
+  const navigate = useNavigate();
+  const handleContact = () => {
+    navigate("/contact")
+  }
   const accordionData = [
     {
       id: 1,
@@ -116,7 +121,7 @@ function Performance() {
                 </Typography>
               </CardContent>
               <Box m={1}>
-                <Button variant="contained" color="primary">
+                <Button  onClick={handleContact} variant="contained" color="primary">
                   Get a free quote
                 </Button>
               </Box>
@@ -176,10 +181,10 @@ function Performance() {
             },
             margin: "0 auto",
             display: "flex",
-            height:"auto",
+            height: "auto",
             alignItems: "center",
             justifyContent: "space-evenly",
-            py:2,
+            py: 2,
             flexDirection: { xs: "column", lg: "row" },
           }}
         >
@@ -193,7 +198,7 @@ function Performance() {
           />
           <Box
             sx={{
-              width: {xs:"80%", lg:"50%"},
+              width: { xs: "80%", lg: "50%" },
               display: "flex",
               flexDirection: "column",
               gap: 1,
@@ -208,7 +213,7 @@ function Performance() {
               development, we ensure your website outperforms your expectations.
             </Typography>
           </Box>
-          <Button variant="contained">get a free quote</Button>
+          <Button onClick={handleContact} variant="contained">get a free quote</Button>
         </Box>
       </Box>
     </>

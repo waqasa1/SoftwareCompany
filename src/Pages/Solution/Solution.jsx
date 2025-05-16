@@ -16,7 +16,12 @@ import Scalability from "../../assets/Scalability.svg";
 import Industry from "../../assets/Industry.svg";
 import SolutionMain from "../../assets/solution-main.webp";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 function Solution() {
+  const navigate = useNavigate();
+  const handleResource = () =>{
+    navigate('/contact')
+  }
   const cardData = [
     {
       title: "Managed Services",
@@ -267,6 +272,7 @@ function Solution() {
                 specific needs to match your specific goals.
               </Typography>
               <Button
+              onClick={handleResource}
                 sx={{
                   fontSize: "12px",
                   textTransform: "none",

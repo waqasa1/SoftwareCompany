@@ -12,10 +12,12 @@ import Solution from "./Solution/Solution";
 import Hero from './WebDev/Hero'
 import Otters from "./WebDev/Otters";
 import Performance from "./WebDev/Perfomance";
+import ScrollToTop from "./ScrollToTop";
 
 const AppRoutes = () => {
   return (
     <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Layout />}>
       <Route index element={<Contact />} />
