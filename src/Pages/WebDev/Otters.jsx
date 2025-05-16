@@ -18,24 +18,30 @@ import Arshad from "../../assets/Arshad-1.jpg";
 import Sameen from "../../assets/Sameen-1.jpg";
 import Shazaib from "../../assets/shahzaib-1.webp";
 import Social from "../../assets/social-1.jpg";
-import facbaook from "../../assets/facebook-cricle.webp";
-import instagram from "../../assets/instagram.webp";
-import linkdein from "../../assets/linkedin-cir.webp";
-import x from "../../assets/X.webp";
-import youtube from "../../assets/youtube-1.webp";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Gpt from "../../assets/gptvs.jpg";
 import Cat from "../../assets/otters-cat.jpg";
 import { useNavigate } from "react-router-dom";
 function Otters() {
   const navigate = useNavigate();
   const handleContact = () => {
-    navigate("/contact")
-  }
+    navigate("/contact");
+  };
 
   const images1 = [Ahsan, Arshad, Sameen, Shazaib, Social, Ahsan];
   const images2 = [Sameen, Shazaib, Social, Arshad, Sameen, Ahsan];
 
-  const socialApp = [facbaook, instagram, linkdein, x, youtube];
+  const socialApp = [
+    { icon: FacebookOutlinedIcon, color: "#1877F2" },
+    { icon: InstagramIcon, color: "#E1306C" },
+    { icon: LinkedInIcon, color: "#0077B5" },
+    { icon: XIcon, color: "#000000" },
+    { icon: YouTubeIcon, color: "#FF0000" },
+  ];
   const sliderSettingsLTR = {
     infinite: true,
     autoplay: true,
@@ -257,7 +263,7 @@ function Otters() {
 
               <CardActions>
                 <Button
-                onClick={handleContact}
+                  onClick={handleContact}
                   sx={{
                     position: "relative",
                   }}
@@ -313,7 +319,7 @@ function Otters() {
                 customers, and users.
               </Typography>
               <Button
-               onClick={handleContact}
+                onClick={handleContact}
                 variant="contained"
                 sx={{ maxHeight: "30px", textTransform: "none" }}
               >
@@ -379,19 +385,28 @@ function Otters() {
         </Grid>
       </Box>
       <Box
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center",}}
         className="socail-app"
       >
-        {socialApp.map((pics, i) => (
+        {socialApp.map(({ icon: IconComponent, color }, i) => (
           <Box
-            component="img"
-            src={pics}
-            alt="images"
+            key={i}
             sx={{
-              height: { xs: "8vh", lg: "20vh" },
-              width: { xs: "60px", lg: "200px" },
+              p: "10px",
+              // m: .5,
+              backgroundColor: color,
+              // borderRadius: "10px",
+              height: { xs: "8vh", lg: "25vh" },
+              width: { xs: "60px", lg: "100%" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
-          />
+          >
+            <IconComponent
+              sx={{ fontSize: { xs: 40, lg: 100 }, color: "#fff" }}
+            />
+          </Box>
         ))}
       </Box>
     </>

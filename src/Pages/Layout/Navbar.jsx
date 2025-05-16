@@ -15,9 +15,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 const pages = [
   { label: "H.", path: "/" },
-  { label: "Solutions", path: "/solution" },
+  { label: "Services", path: "/solution" },
   { label: "Company", path: "/herodev" },
-  { label: "Case Studies", path: "/case-studies" },
+  // { label: "Case Studies", path: "/case-studies" },
   { label: "Blog", path: "/blog" },
   { label: "Resources", path: "/contact" },
 ];
