@@ -344,7 +344,7 @@ const Hero = () => {
                 <Box sx={{ gap: '30px', justifyItems: 'center', py: { xs: '20px', lg: '80px' } }}>
                     <Typography sx={{ fontSize: '36px', color: 'white', marginBottom: '20px' }}>Have a Project? Let's Discuss</Typography>
                     <Typography sx={{ textAlign: { xs: 'left', lg: 'center' }, width: { lg: '80%' }, color: 'white' }}>Let’s elevate your digital presence with a website that speaks your brand the way you want. From custom web development services, you can have a digital portfolio, corporate website, or an online store. Convert your ideas, and designs into a functional dynamic website.</Typography>
-                    <Button variant='contained' disableElevation sx={{ marginTop: '10px', backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
+                    <Button variant='contained' disableElevation sx={{  backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
                 </Box>
             </Box>
             {/*---------Webdev Services Section-------------*/}
@@ -501,6 +501,15 @@ const Hero = () => {
                     </Box>
                 </Box>
             </Box>
+             {/*----------Lets discuss the future? Section -----------------*/}
+            <Box sx={{ backgroundColor: "#1976d2", height: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', px: '20px' }}>
+                <Box sx={{ gap: '30px', justifyItems: 'center', py: { xs: '20px', lg: '80px' } }}>
+                    <Typography sx={{ fontSize: '36px', color: 'white', marginBottom: '20px' }}>Let's Discuss The Future of Your Web Presence</Typography>
+                    <Typography sx={{ textAlign: { xs: 'left', lg: 'center' }, width: { lg: '80%' }, color: 'white' }}>With pricing custom to you, your project, and your requirements feel free to contact us for a web development proposal. Let’s discuss and strategize your digital presence on the web with your digital portfolio, your website</Typography>
+                    <Button variant='contained' disableElevation sx={{  backgroundColor: 'black', marginTop: '20px', marginLeft: { xs: '-50%', lg: '0px' } }}>Get a Free Quote</Button>
+                </Box>
+            </Box>
+            {/*-------------------*/}
             <Performance />
             <Otters />
 
