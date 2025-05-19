@@ -14,6 +14,10 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link, useNavigate } from "react-router-dom";
 import { Card } from "@mui/material";
 import CompanyDropdown from "./Company";
+import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUp from "@mui/icons-material/KeyboardArrowUp";
+import CompanySubItems from "./SubItem";
+
 
 const pages = [
   { label: "H.", path: "/" },
@@ -28,6 +32,7 @@ const pages = [
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
    const [hovered, setHovered] = React.useState(false);
+   const [showDropdown, setShowDropdown] = React.useState(false)
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -286,15 +291,49 @@ function Navbar() {
               sx={{ display: { xs: "block", lg: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  key={page.label}
-                  onClick={() => handleNavClick(page.path)}
-                >
-                  <Typography sx={{ textAlign: "center" }}>
-                    {page.label}
-                  </Typography>
-                </MenuItem>
-              ))}
+  <Box key={page.label}>
+    {page.label === "Company" ? (
+      <>
+        <MenuItem
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingRight: 0,
+          }}
+        >
+          <Typography
+            onClick={() => handleNavClick("/herodev")}
+            sx={{ cursor: "pointer", flexGrow: 1 }}
+          >
+            Company
+          </Typography>
+
+          <IconButton
+            onClick={() => setShowDropdown((prev) => !prev)}
+            size="small"
+          >
+            {showDropdown ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+          </IconButton>
+        </MenuItem>
+
+        {showDropdown && (
+          <CompanySubItems 
+          closeMenu={() => {
+            setShowDropdown(false);
+             setAnchorElNav(null);
+            }}
+            />
+        )}
+      </>
+    ) : (
+      <MenuItem onClick={() => handleNavClick(page.path)}>
+        <Typography>{page.label}</Typography>
+      </MenuItem>
+    )}
+  </Box>
+))}
+
             </Menu>
           </Box>
         </Toolbar>
