@@ -13,6 +13,10 @@ import Hero from './WebDev/Hero'
 import Otters from "./WebDev/Otters";
 import Performance from "./WebDev/Perfomance";
 import ScrollToTop from "./ScrollToTop";
+import Node from "../Company/Node";
+import ReactServices from "../Company/React";
+import Shopify from "../Company/Shopify.jsx";
+import Php from "../Company/Php.jsx";
 
 const AppRoutes = () => {
   return (
@@ -30,6 +34,10 @@ const AppRoutes = () => {
       <Route path="/herodev" element={<Hero/>} />
       <Route path="/otter" element={<Otters />} />
       <Route path="/performance" element={<Performance />} />
+      <Route path="/node" element={<Node />}/>
+      <Route path="/react" element={<ReactServices />} />
+      <Route path="/shopify" element={<Shopify />}/>
+      <Route path="/php" element={<Php />} />
       </Route>
     </Routes>
     </>

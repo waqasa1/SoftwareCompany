@@ -12,6 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link, useNavigate } from "react-router-dom";
+import { Card } from "@mui/material";
+import CompanyDropdown from "./Company";
 
 const pages = [
   { label: "H.", path: "/" },
@@ -22,11 +24,10 @@ const pages = [
   { label: "Resources", path: "/contact" },
 ];
 
-{
-  /* navbar */
-}
+
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+   const [hovered, setHovered] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -112,7 +113,7 @@ function Navbar() {
             </Typography>
           </Box>
           {/* Desktop menu items */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page.label}
@@ -127,7 +128,105 @@ function Navbar() {
                 {page.label}
               </Button>
             ))}
-          </Box>
+          </Box> */}
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
+  <Button
+    onClick={() => handleNavClick("/")}
+    sx={{
+      my: 2,
+      color: "inherit",
+      display: "block",
+      ":hover": { color: "blue", background: "none" },
+    }}
+  >
+    H.
+  </Button>
+  <Button
+    onClick={() => handleNavClick("/solution")}
+    sx={{
+      my: 2,
+      color: "inherit",
+      display: "block",
+      ":hover": { color: "blue", background: "none" },
+    }}
+  >
+    Services
+  </Button>
+  {/* <Box
+      sx={{ position: "relative" }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <Button
+        sx={{
+          my: 2,
+          color: "inherit",
+          display: "block",
+          ":hover": { color: "blue", background: "none" },
+        }}
+      >
+        Company
+      </Button>
+
+      {hovered && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: "100%",
+            right: 0,
+            width: "100vw",
+            backgroundColor: "#fff",
+            display: "flex",
+            justifyContent: "space-around",
+            padding: "20px",
+            zIndex: 10,
+            boxShadow: "0px 4px 20px rgba(0,0,0,0.1)",
+          }}
+        >
+          {[1, 2, 3, 4].map((item, i) => (
+            <Card
+              key={i}
+              sx={{
+                width: "100%", // Four cards with some gap
+                padding: "10px",
+                textAlign: "center",
+                ":hover": { backgroundColor: "#f0f0f0" },
+              }}
+            >
+              <Typography variant="h6">Card {item}</Typography>
+              <Typography variant="body2">Content for card {item}</Typography>
+            </Card>
+          ))}
+        </Box>
+      )}
+    </Box> */}
+
+    <CompanyDropdown />
+  <Button
+    onClick={() => handleNavClick("/blog")}
+    sx={{
+      my: 2,
+      color: "inherit",
+      display: "block",
+      ":hover": { color: "blue", background: "none" },
+    }}
+  >
+    Blog
+  </Button>
+  <Button
+    onClick={() => handleNavClick("/contact")}
+    sx={{
+      my: 2,
+      color: "inherit",
+      display: "block",
+      ":hover": { color: "blue", background: "none" },
+    }}
+  >
+    Resources
+  </Button>
+</Box>
+
           <Box
             sx={{
               display: { xs: "none", lg: "flex" },
