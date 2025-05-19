@@ -385,7 +385,7 @@ function Otters() {
         </Grid>
       </Box>
       <Box
-        sx={{ display: "flex", justifyContent: "center",}}
+        sx={{ display: "flex", justifyContent: "center" }}
         className="socail-app"
       >
         {socialApp.map(({ icon: IconComponent, color }, i) => (
