@@ -3,16 +3,16 @@ import { FaWordpress, FaLaravel, FaShieldAlt, FaCogs, FaDatabase, FaSyncAlt } fr
 
 const Php = () => {
   const services = [
-    {
-      title: "WordPress Development",
-      description: "Custom WordPress themes and plugins tailored to your business needs.",
-      icon: <FaWordpress style={{ fontSize: "2.5rem", color: "#777BB3" }} />,
-      features: [
-        "Custom theme development",
-        "Plugin customization",
-        "WooCommerce solutions"
-      ]
-    },
+    // {
+    //   title: "WordPress Development",
+    //   description: "Custom WordPress themes and plugins tailored to your business needs.",
+    //   icon: <FaWordpress style={{ fontSize: "2.5rem", color: "#777BB3" }} />,
+    //   features: [
+    //     "Custom theme development",
+    //     "Plugin customization",
+    //     "WooCommerce solutions"
+    //   ]
+    // },
     {
       title: "Laravel Applications",
       description: "Enterprise-grade web applications built with Laravel framework.",
