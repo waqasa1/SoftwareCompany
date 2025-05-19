@@ -18,7 +18,6 @@ import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUp from "@mui/icons-material/KeyboardArrowUp";
 import CompanySubItems from "./SubItem";
 
-
 const pages = [
   { label: "H.", path: "/" },
   { label: "Services", path: "/solution" },
@@ -28,11 +27,10 @@ const pages = [
   { label: "Resources", path: "/contact" },
 ];
 
-
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-   const [hovered, setHovered] = React.useState(false);
-   const [showDropdown, setShowDropdown] = React.useState(false)
+  const [hovered, setHovered] = React.useState(false);
+  const [showDropdown, setShowDropdown] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -134,31 +132,30 @@ function Navbar() {
               </Button>
             ))}
           </Box> */}
-
           <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
-  <Button
-    onClick={() => handleNavClick("/")}
-    sx={{
-      my: 2,
-      color: "inherit",
-      display: "block",
-      ":hover": { color: "blue", background: "none" },
-    }}
-  >
-    H.
-  </Button>
-  <Button
-    onClick={() => handleNavClick("/solution")}
-    sx={{
-      my: 2,
-      color: "inherit",
-      display: "block",
-      ":hover": { color: "blue", background: "none" },
-    }}
-  >
-    Services
-  </Button>
-  {/* <Box
+            <Button
+              onClick={() => handleNavClick("/")}
+              sx={{
+                my: 2,
+                color: "inherit",
+                display: "block",
+                ":hover": { color: "blue", background: "none" },
+              }}
+            >
+              H.
+            </Button>
+            <Button
+              onClick={() => handleNavClick("/solution")}
+              sx={{
+                my: 2,
+                color: "inherit",
+                display: "block",
+                ":hover": { color: "blue", background: "none" },
+              }}
+            >
+              Services
+            </Button>
+            {/* <Box
       sx={{ position: "relative" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -207,31 +204,30 @@ function Navbar() {
       )}
     </Box> */}
 
-    <CompanyDropdown />
-  <Button
-    onClick={() => handleNavClick("/blog")}
-    sx={{
-      my: 2,
-      color: "inherit",
-      display: "block",
-      ":hover": { color: "blue", background: "none" },
-    }}
-  >
-    Blog
-  </Button>
-  <Button
-    onClick={() => handleNavClick("/contact")}
-    sx={{
-      my: 2,
-      color: "inherit",
-      display: "block",
-      ":hover": { color: "blue", background: "none" },
-    }}
-  >
-    Resources
-  </Button>
-</Box>
-
+            <CompanyDropdown />
+            <Button
+              onClick={() => handleNavClick("/blog")}
+              sx={{
+                my: 2,
+                color: "inherit",
+                display: "block",
+                ":hover": { color: "blue", background: "none" },
+              }}
+            >
+              Blog
+            </Button>
+            <Button
+              onClick={() => handleNavClick("/contact")}
+              sx={{
+                my: 2,
+                color: "inherit",
+                display: "block",
+                ":hover": { color: "blue", background: "none" },
+              }}
+            >
+              Resources
+            </Button>
+          </Box>
           <Box
             sx={{
               display: { xs: "none", lg: "flex" },
@@ -291,49 +287,52 @@ function Navbar() {
               sx={{ display: { xs: "block", lg: "none" } }}
             >
               {pages.map((page) => (
-  <Box key={page.label}>
-    {page.label === "Company" ? (
-      <>
-        <MenuItem
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            paddingRight: 0,
-          }}
-        >
-          <Typography
-            onClick={() => handleNavClick("/herodev")}
-            sx={{ cursor: "pointer", flexGrow: 1 }}
-          >
-            Company
-          </Typography>
+                <Box key={page.label}>
+                  {page.label === "Company" ? (
+                    <>
+                      <MenuItem
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          paddingRight: 0,
+                        }}
+                      >
+                        <Typography
+                          onClick={() => handleNavClick("/herodev")}
+                          sx={{ cursor: "pointer", flexGrow: 1 }}
+                        >
+                          Company
+                        </Typography>
 
-          <IconButton
-            onClick={() => setShowDropdown((prev) => !prev)}
-            size="small"
-          >
-            {showDropdown ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-          </IconButton>
-        </MenuItem>
+                        <IconButton
+                          onClick={() => setShowDropdown((prev) => !prev)}
+                          size="small"
+                        >
+                          {showDropdown ? (
+                            <KeyboardArrowUp />
+                          ) : (
+                            <KeyboardArrowDown />
+                          )}
+                        </IconButton>
+                      </MenuItem>
 
-        {showDropdown && (
-          <CompanySubItems 
-          closeMenu={() => {
-            setShowDropdown(false);
-             setAnchorElNav(null);
-            }}
-            />
-        )}
-      </>
-    ) : (
-      <MenuItem onClick={() => handleNavClick(page.path)}>
-        <Typography>{page.label}</Typography>
-      </MenuItem>
-    )}
-  </Box>
-))}
-
+                      {showDropdown && (
+                        <CompanySubItems
+                          closeMenu={() => {
+                            setShowDropdown(false);
+                            setAnchorElNav(null);
+                          }}
+                        />
+                      )}
+                    </>
+                  ) : (
+                    <MenuItem onClick={() => handleNavClick(page.path)}>
+                      <Typography>{page.label}</Typography>
+                    </MenuItem>
+                  )}
+                </Box>
+              ))}
             </Menu>
           </Box>
         </Toolbar>

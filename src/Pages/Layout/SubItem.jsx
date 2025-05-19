@@ -20,7 +20,7 @@ const CompanySubItems = ({ closeMenu }) => {
             navigate(item.path);
             closeMenu();
           }}
-          sx={{ pl: 3 }} 
+          sx={{ pl: 3 }}
         >
           <Typography>{item.title}</Typography>
         </MenuItem>
