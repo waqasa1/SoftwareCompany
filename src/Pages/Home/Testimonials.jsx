@@ -108,35 +108,6 @@ export default function Testimonials() {
             <ArrowForwardIcon />
           </IconButton>
           <Divider sx={{ width: '80%', margin: '0 auto', mb: '20px', display: { xs: 'block', lg: 'none' } }} />
-          <Box sx={{ width: { xs: "100%", lg: "30%" }, mb: 2, ml: "auto" }}>
-            <Box sx={{ display: "flex" }}>
-              Reviewed on
-              <Rating name="read-only" value={5} readOnly sx={{ color: "red", marginLeft: "10px" }} size="small" />
-            </Box>
-            <Box>
-              <img
-                src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/clutch-logo.svg"
-                alt="logo"
-                style={{ maxWidth: "80px", marginRight: "10px" }}
-              />
-              31 reviews
-            </Box>
-          </Box>
-          <Box sx={{ width: { xs: "100%", lg: "30%" }, mb: 2, display: "flex", alignItems: "center" }}>
-            <Box sx={{ mr: "10px" }}>
-              <img
-                src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Google_22G22_Logo.svg"
-                alt="Google logo"
-              />
-            </Box>
-            <Box>
-              <Box sx={{ display: "flex" }}>
-                4.9
-                <Rating name="read-only" value={4.5} precision={0.5} readOnly size="small" />
-              </Box>
-              <Box>Customer Reviews</Box>
-            </Box>
-          </Box>
         </Box>
       </Paper>
     </Box>

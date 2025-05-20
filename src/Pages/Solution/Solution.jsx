@@ -15,7 +15,8 @@ import innovative from "../../assets/Innovative.svg";
 import Scalability from "../../assets/Scalability.svg";
 import Industry from "../../assets/Industry.svg";
 import SolutionMain from "../../assets/solution-main.webp";
-import React from "react";
+import React, { useState } from "react";
+import ReadMoreText from '../../Utils/ReadMore'
 import { useNavigate } from "react-router-dom";
 function Solution() {
   const navigate = useNavigate();
@@ -60,6 +61,10 @@ function Solution() {
       image: Industry,
     },
   ];
+  const [expandedCard, setExpandedCard] = useState(null);
+  const toggleExpand = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
   return (
     <>
       <Box sx={{ m: 3 }}>
@@ -150,81 +155,90 @@ function Solution() {
               mt: 4,
             }}
           >
-            {cardData.map((card, index) => (
-              <Card
-                key={index}
-                sx={{
-                  width: { xs: "100%", lg: "30%" },
-                  padding: "10px",
-                  margin: { xs: "10px", lg: "0" },
-                  transition: "0.3s",
-                  ":hover": {
-                    boxShadow: 24,
-                  },
-                  "&:hover .hover-text": {
-                    color: "blue",
-                  },
-                }}
-              >
-                <img
-                  alt={card.title}
-                  src={card.image}
-                  height="80"
-                  width="80"
-                  style={{ paddingLeft: "20px" }}
-                />
-
-                <CardContent sx={{ minHeight: "100px" }}>
-                  <Typography
-                    gutterBottom
-                    className="hover-text"
-                    variant="h5"
-                    component="div"
-                    sx={{ fontSize: "24px", fontWeight: 600 }}
-                  >
-                    {card.title}
-                  </Typography>
-
-                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                    {card.description}
-                  </Typography>
-                </CardContent>
-
-                <Divider />
-
-                <CardActions>
-                  <Button
-                    sx={{
-                      fontSize: "12px",
-                      textTransform: "none",
+            {cardData.map((card, index) => {
+              const isLong = card.description.length > 100;
+              return (
+                <Card
+                  key={index}
+                  sx={{
+                    width: { xs: "100%", lg: "30%" },
+                    padding: "10px",
+                    margin: { xs: "10px", lg: "0" },
+                    transition: "0.3s",
+                    ":hover": {
+                      boxShadow: 24,
+                    },
+                    "&:hover .hover-text": {
                       color: "blue",
-                      fontWeight: "bold",
-                      position: "relative",
-                      ":hover": {
-                        color: "black",
-                        background: "none",
-                      },
-                      "&::after": {
-                        content: '""',
-                        position: "absolute",
-                        left: 0,
-                        bottom: "10px",
-                        height: "1px",
-                        width: "0%",
-                        backgroundColor: "black",
-                        transition: "width 0.3s ease-in-out",
-                        marginLeft: "9px",
-                      },
-                      "&:hover::after": {
-                        width: "80%",
-                      },
-                    }}
-                  >
-                    Learn More
-                  </Button>
-                </CardActions>
-              </Card>
-            ))}
+                    },
+                  }}
+                >
+                  <img
+                    alt={card.title}
+                    src={card.image}
+                    height="80"
+                    width="80"
+                    style={{ paddingLeft: "20px" }}
+                  />
+
+                  <CardContent sx={{ minHeight: "100px" }}>
+                    <Typography
+                      gutterBottom
+                      className="hover-text"
+                      variant="h5"
+                      component="div"
+                      sx={{ fontSize: "24px", fontWeight: 600 }}
+                    >
+                      {card.title}
+                    </Typography>
+
+                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                       <ReadMoreText
+                        text={card.description}
+                        maxChars={100}
+                        expanded={expandedCard === index}
+                      />
+                    </Typography>
+                  </CardContent>
+
+                  <Divider />
+                  {isLong && (
+                  <CardActions>
+                    <Button
+                    onClick={() => toggleExpand(index)}
+                      sx={{
+                        fontSize: "12px",
+                        textTransform: "none",
+                        color: "blue",
+                        fontWeight: "bold",
+                        position: "relative",
+                        ":hover": {
+                          color: "black",
+                          background: "none",
+                        },
+                        "&::after": {
+                          content: '""',
+                          position: "absolute",
+                          left: 0,
+                          bottom: "10px",
+                          height: "1px",
+                          width: "0%",
+                          backgroundColor: "black",
+                          transition: "width 0.3s ease-in-out",
+                          marginLeft: "9px",
+                        },
+                        "&:hover::after": {
+                          width: "80%",
+                        },
+                      }}
+                    >
+                      {expandedCard === index ? "Learn Less" : "Learn More"}
+                    </Button>
+                  </CardActions>
+                  )}
+                </Card>
+              );
+            })}
           </Box>
         </Box>
       </Box>
