@@ -238,27 +238,6 @@ const StarFooter = () => {
           alignItems: "center",
         }}
       >
-        <Box sx={{ width: { xs: "100%", lg: "20%" }, mb: 2 }}>
-          <Box>
-            Reviewed on
-            <Rating
-              name="read-only"
-              value={5}
-              readOnly
-              sx={{ color: "red", marginLeft: "10px" }}
-              size="small"
-            />
-          </Box>
-          <Box>
-            {" "}
-            <img
-              src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/clutch-logo.svg"
-              alt="logo"
-              style={{ maxWidth: "80px", marginRight: "10px" }}
-            />
-            31 reviews
-          </Box>
-        </Box>
         <Box sx={{ width: { xs: "50%", lg: "20%" }, mb: 2 }}>
           <Typography
             sx={{

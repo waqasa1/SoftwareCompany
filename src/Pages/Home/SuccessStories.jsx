@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -13,6 +13,7 @@ import {
 import insurance from "../../assets/insurance.webp";
 import ness from "../../assets/ness.webp";
 import undergroup from "../../assets/undergroup.webp";
+import ReadMoreText from "../../Utils/ReadMore";
 
 const SuccessStories = () => {
   const cardData = [
@@ -41,6 +42,12 @@ const SuccessStories = () => {
       image: undergroup,
     },
   ];
+
+  const [expandedCard, setExpandedCard] = useState(null);
+  const toggleExpand = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
   return (
     <>
       <Box sx={{ py: "20px" }}>
@@ -74,100 +81,110 @@ const SuccessStories = () => {
               mt: 4,
             }}
           >
-            {cardData.map((card, index) => (
-              <Card
-                key={index}
-                sx={{
-                  width: { xs: "100%", lg: "30%" },
-                  height: "fit-content",
-                  padding: "12px",
-                  margin: { xs: "10px", lg: "0" },
-                  transition: "0.3s",
-                  border: "1px solid rgb(231, 225, 225)",
-                  borderRadius: "10px",
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={card.image}
-                  alt="green iguana"
-                  sx={{ borderRadius: "10px" }}
-                />
+            {cardData.map((card, index) => {
+              const isLong = card.description.length > 100;
+              return (
+                <Card
+                  key={index}
+                  sx={{
+                    width: { xs: "100%", lg: "30%" },
+                    height: "auto",
+                    padding: "12px",
+                    margin: { xs: "10px", lg: "0" },
+                    transition: "0.3s",
+                    border: "1px solid rgb(231, 225, 225)",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={card.image}
+                    alt="green iguana"
+                    sx={{ borderRadius: "10px" }}
+                  />
 
-                <CardContent sx={{ minHeight: "100px" }}>
-                  <Button
-                    sx={{
-                      marginLeft: "-8px",
-                      marginBottom: "10px",
-                      fontSize: "12px",
-                      color: "rgb(168, 159, 159)",
-                      fontWeight: "600",
-                      ":hover": {
-                        color: "blue",
-                        background: "none",
-                      },
-                    }}
-                  >
-                    {card.niche}
-                  </Button>
-                  <Typography
-                    gutterBottom
-                    className="hover-text"
-                    variant="h5"
-                    component="div"
-                    sx={{
-                      fontSize: "20px",
-                      fontWeight: 600,
-                      ":hover": { color: "blue" },
-                    }}
-                  >
-                    {card.title}
-                  </Typography>
+                  <CardContent sx={{ minHeight: "100px" }}>
+                    <Button
+                      sx={{
+                        marginLeft: "-8px",
+                        marginBottom: "10px",
+                        fontSize: "12px",
+                        color: "rgb(168, 159, 159)",
+                        fontWeight: "600",
+                        ":hover": {
+                          color: "blue",
+                          background: "none",
+                        },
+                      }}
+                    >
+                      {card.niche}
+                    </Button>
+                    <Typography
+                      gutterBottom
+                      className="hover-text"
+                      variant="h5"
+                      component="div"
+                      sx={{
+                        fontSize: "20px",
+                        fontWeight: 600,
+                        ":hover": { color: "blue" },
+                      }}
+                    >
+                      {card.title}
+                    </Typography>
 
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: "text.secondary",
-                      fontSize: "16px",
-                      marginTop: "10px",
-                    }}
-                  >
-                    {card.description}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: "text.secondary",
-                      fontSize: "16px",
-                      marginTop: "10px",
-                    }}
-                  >
-                    ✔︎ Modern infrastructure
-                    <br />
-                    ✔︎ Consulting services
-                  </Typography>
-                </CardContent>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "text.secondary",
+                        fontSize: "16px",
+                        marginTop: "10px",
+                      }}
+                    >
+                      <ReadMoreText
+                        text={card.description}
+                        maxChars={100}
+                        expanded={expandedCard === index}
+                      />
 
-                <CardActions>
-                  <Button
-                    sx={{
-                      fontSize: "10px",
-                      textTransform: "none",
-                      color: "black",
-                      fontWeight: "600",
-                      position: "relative",
-                      ":hover": {
-                        color: "blue",
-                        background: "none",
-                      },
-                    }}
-                  >
-                    Learn More
-                  </Button>
-                </CardActions>
-              </Card>
-            ))}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "text.secondary",
+                        fontSize: "16px",
+                        marginTop: "10px",
+                      }}
+                    >
+                      ✔︎ Modern infrastructure
+                      <br />
+                      ✔︎ Consulting services
+                    </Typography>
+                  </CardContent>
+                  {isLong && (
+                  <CardActions>
+                    <Button
+                      onClick={() => toggleExpand(index)}
+                      sx={{
+                        fontSize: "10px",
+                        textTransform: "none",
+                        color: "black",
+                        fontWeight: "600",
+                        position: "relative",
+                        ":hover": {
+                          color: "blue",
+                          background: "none",
+                        },
+                      }}
+                    >
+                      {expandedCard === index ? "Learn Less" : "Learn More"}
+                    </Button>
+                  </CardActions>
+                  )}
+                </Card>
+              );
+            })}
           </Box>
         </Box>
       </Box>
