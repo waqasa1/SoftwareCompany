@@ -17,6 +17,7 @@ import CompanyDropdown from "./Company";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUp from "@mui/icons-material/KeyboardArrowUp";
 import CompanySubItems from "./SubItem";
+import logo from '../../assets/ThinkOwebsitelogo.png'
 
 const pages = [
   { label: "H.", path: "/" },
@@ -72,7 +73,7 @@ function Navbar() {
             alignItems="center"
             sx={{ flexGrow: 1, cursor: "pointer" }}
           >
-            <AdbIcon sx={{ display: { xs: "none", lg: "flex" }, mr: 1 }} />
+            <Box component='img' height={30} width={30} src={logo} sx={{ display: { xs: "none", lg: "flex" }, mr: 1 }} />
             <Typography
               variant="h6"
               noWrap
@@ -98,7 +99,7 @@ function Navbar() {
             alignItems="center"
             sx={{ flexGrow: 1, cursor: "pointer" }}
           >
-            <AdbIcon sx={{ display: { xs: "flex", lg: "none" }, mr: 1 }} />
+            <Box component='img' height={30} width={30} src={logo} sx={{ display: { xs: "flex", lg: "none" }, mr: 1 }} />
             <Typography
               variant="h5"
               noWrap
