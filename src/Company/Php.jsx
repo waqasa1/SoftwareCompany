@@ -73,6 +73,8 @@ const Php = () => {
           }}
         >
           <h2
+            data-aos="fade"
+            data-aos-delay="200"
             style={{
               fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
               fontWeight: "700",
@@ -84,6 +86,8 @@ const Php = () => {
             PHP Development Services
           </h2>
           <p
+            data-aos="fade"
+            data-aos-delay="200"
             style={{
               fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
               color: "#4a4a5a",

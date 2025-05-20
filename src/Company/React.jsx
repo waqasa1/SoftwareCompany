@@ -79,26 +79,32 @@ const ReactServices = () => {
           textAlign: "center",
           marginBottom: "3rem"
         }}>
-          <h2 style={{
-            fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
-            fontWeight: "700",
-            color: "#212529",
-            marginBottom: "1rem",
-            lineHeight: "1.2"
-          }}>
+          <h2
+            data-aos="fade"
+            data-aos-delay="200"
+            style={{
+              fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
+              fontWeight: "700",
+              color: "#212529",
+              marginBottom: "1rem",
+              lineHeight: "1.2"
+            }}>
             Our React Development Services
           </h2>
-          <p style={{
-            fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-            color: "#495057",
-            maxWidth: "700px",
-            margin: "0 auto",
-            lineHeight: "1.6"
-          }}>
+          <p
+            data-aos="fade"
+            data-aos-delay="200"
+            style={{
+              fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+              color: "#495057",
+              maxWidth: "700px",
+              margin: "0 auto",
+              lineHeight: "1.6"
+            }}>
             We build high-performance React applications that drive business growth and deliver exceptional user experiences.
           </p>
         </div>
-        
+
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -119,7 +125,7 @@ const ReactServices = () => {
                 boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)"
               }
             }}>
-              <div style={{ 
+              <div style={{
                 fontSize: "2.5rem",
                 color: "#4263eb",
                 marginBottom: "1.5rem"

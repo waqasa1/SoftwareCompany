@@ -79,26 +79,32 @@ const Shopify = () => {
           textAlign: "center",
           marginBottom: "3rem"
         }}>
-          <h2 style={{
-            fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
-            fontWeight: "700",
-            color: "#3a4a2c",
-            marginBottom: "1rem",
-            lineHeight: "1.2"
-          }}>
+          <h2
+            data-aos="fade"
+            data-aos-delay="200"
+            style={{
+              fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
+              fontWeight: "700",
+              color: "#3a4a2c",
+              marginBottom: "1rem",
+              lineHeight: "1.2"
+            }}>
             Shopify Development Services
           </h2>
-          <p style={{
-            fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-            color: "#4a5a3a",
-            maxWidth: "700px",
-            margin: "0 auto",
-            lineHeight: "1.6"
-          }}>
+          <p
+            data-aos="fade"
+            data-aos-delay="200"
+            style={{
+              fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+              color: "#4a5a3a",
+              maxWidth: "700px",
+              margin: "0 auto",
+              lineHeight: "1.6"
+            }}>
             Complete e-commerce solutions built on the Shopify platform.
           </p>
         </div>
-        
+
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -112,7 +118,7 @@ const Shopify = () => {
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)",
               transition: "all 0.3s ease"
             }}>
-              <div style={{ 
+              <div style={{
                 fontSize: "2.5rem",
                 color: "#95BF47",
                 marginBottom: "1.5rem"
