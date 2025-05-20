@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -65,6 +65,19 @@ const HeroSection = () => {
       image: Industry,
     }
   ];
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Moves up when you scroll down, down when you scroll up
+  const translateY = -scrollY * 0.1; // Adjust multiplier to control speed
 
   const [expandedCard, setExpandedCard] = useState(null);
   const toggleExpand = (index) => {
@@ -165,7 +178,7 @@ const HeroSection = () => {
               paddingLeft: "10px",
               fontWeight: "700",
               fontSize: "20px",
-              borderLeft: {xs:'2px solid gray',lg:'none'}
+              borderLeft: { xs: '2px solid gray', lg: 'none' }
             }}
           >
             {" "}
@@ -273,10 +286,12 @@ const HeroSection = () => {
             src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Shape-dots-arrow-right.svg"
             alt="Tilted image"
             style={{
-              transform: "rotate(-90deg)",
               height: "220px",
-              marginTop: "30px",
-              marginRight: '20px'
+              marginTop: "100px",
+              marginRight: '20px',
+              transform: `rotate(-90deg) translateX(${-translateY}px)`,
+              transition: 'transform 0.1s linear',
+              position: 'relative', // or 'fixed' for stronger parallax
             }}
           />
         </Box>
@@ -290,7 +305,7 @@ const HeroSection = () => {
           margin: "0 auto",
           justifyContent: "space-between",
           marginTop: "20px",
-          px:'20px'
+          px: '20px'
         }}
       >
         <Box sx={{ padding: "10px" }}>
@@ -404,7 +419,7 @@ const HeroSection = () => {
       </Box>
       {/*--------------------- How We Do  Section ------------------*/}
       <Box sx={{ backgroundColor: "#B3C9E7", py: "20px" }}>
-        <Box sx={{ width: { lg: "80%" }, margin: "0 auto", px:'20px' }}>
+        <Box sx={{ width: { lg: "80%" }, margin: "0 auto", px: '20px' }}>
           <Button
             sx={{
               color: "gray",
