@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Button, Divider, Rating, Card, CardMedia, CardActions, CardContent } from '@mui/material'
+import { Box, Typography, Button, Divider} from '@mui/material'
 import { Maximize } from '@mui/icons-material';
 
 const ContactPage = () => {
@@ -68,7 +68,7 @@ const ContactPage = () => {
                                     bottom: '10px',
                                     height: '1px',
                                     width: '0%',
-                                    backgroundColor: 'black', // MUI primary color or custom
+                                    backgroundColor: 'black', 
                                     transition: 'width 0.3s ease-in-out',
                                     marginLeft: '9px'
                                 },
@@ -109,7 +109,7 @@ const ContactPage = () => {
                                     bottom: '10px',
                                     height: '1px',
                                     width: '0%',
-                                    backgroundColor: 'black', // MUI primary color or custom
+                                    backgroundColor: 'black', 
                                     transition: 'width 0.3s ease-in-out',
                                     marginLeft: '9px'
                                 },
@@ -149,7 +149,7 @@ const ContactPage = () => {
                                     bottom: '10px',
                                     height: '1px',
                                     width: '0%',
-                                    backgroundColor: 'black', // MUI primary color or custom
+                                    backgroundColor: 'black', 
                                     transition: 'width 0.3s ease-in-out',
                                     marginLeft: '9px'
                                 },

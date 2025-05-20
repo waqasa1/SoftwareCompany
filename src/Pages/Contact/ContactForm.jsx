@@ -44,24 +44,33 @@ const ContactForm = () => {
   };
 
   return (
-    <Grid item sx={{ backgroundColor: "#d5dbec", position: "relative", p: 2 }}>
+    <Grid item size={{xs:12, lg:12}} sx={{
+            position:{xs:"relative", lg:"absolute"},
+            top:{xs:0, lg:-130},
+            right:{xs:0, lg:100},
+            display:"flex",
+            justifyContent:"center"
+            // backgroundColor:"red"
+          }}>
       <Box
         sx={{
           background: "#fff",
-          p: 2,
+          p: 3,
           borderRadius: 2,
           boxShadow: 3,
-          position: "relative",
+          marginLeft:"auto",
+          // position: "relative",
           // position: "absolute",
           // top: { xs: "50px",md :"-130px", lg: "-130px", xl:"-180px" },
-          mt: { xs: 4, md: -16, lg: -16, xl: -22 },
-          left: "50%",
-          transform: {
-            xs: "translateX(-50%)",
-            md: "translateX(-53%)",
-            lg: "translateX(-53%)",
-          },
-          width: "90%",
+          // mt: { xs: 4, md: -16, lg: -16, xl: -22 },
+          // left: "50%",
+          // transform: {
+          //   xs: "translateX(-50%)",
+          //   md: "translateX(-53%)",
+          //   lg: "translateX(-53%)",
+          // },
+          width: {xs:"100%", lg:"35%"},
+          height:"auto",
         }}
         component="form"
         onSubmit={handleSubmit}
@@ -70,7 +79,7 @@ const ContactForm = () => {
           Contact Us
         </Typography>
 
-        <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
+        <Box sx={{ display: "flex", gap: 2, mb: 3 }}>
           <TextField
             fullWidth
             label="First Name"
@@ -125,7 +134,7 @@ const ContactForm = () => {
           value={formData.company}
           onChange={handleChange}
           sx={{
-            mb: 2,
+            mb: 3,
             "& .MuiOutlinedInput-root": {
               backgroundColor: "white",
               "& fieldset": {
@@ -148,7 +157,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           sx={{
-            mb: 2,
+            mb: 3,
             "& .MuiOutlinedInput-root": {
               backgroundColor: "white",
               "& fieldset": {
@@ -171,7 +180,7 @@ const ContactForm = () => {
           value={formData.phone}
           onChange={handleChange}
           sx={{
-            mb: 2,
+            mb: 3,
             "& .MuiOutlinedInput-root": {
               backgroundColor: "white",
               "& fieldset": {
@@ -195,7 +204,7 @@ const ContactForm = () => {
           value={formData.help}
           onChange={handleChange}
           sx={{
-            mb: 2,
+            mb: 3,
             "& .MuiOutlinedInput-root": {
               backgroundColor: "white",
               "& fieldset": {
@@ -224,7 +233,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           sx={{
-            mb: 2,
+            mb: 4,
             "& .MuiOutlinedInput-root": {
               backgroundColor: "white",
               "& fieldset": {
