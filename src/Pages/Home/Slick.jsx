@@ -1,153 +1,169 @@
-import { Grid, Box, Typography, Card, CardContent, CardMedia, CardActions, Button } from '@mui/material';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import React, { useState } from "react";
+import React from "react";
+import Slider from "react-slick";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  CardActions,
+  Button,
+} from "@mui/material";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const cardData = [
   {
-    title: 'Major Insurance Provider Saves $750k per Month With Big Data Migration',
-    description: 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
+    title: "Major Insurance Provider Saves $750k per Month With Big Data Migration",
+    description:
+      "The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.",
   },
   {
-    title: 'Maximizing Efficiency with Proper Technology Implementation – Coffee Success Story',
-    description: 'The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.',
+    title: "Maximizing Efficiency with Proper Technology Implementation – Coffee Success Story",
+    description:
+      "The company needed to complete a complex migration on a tight deadline to avoid millions of dollars in post-contract fees and fines.",
   },
   {
-    title: 'Strategic Move to an AI-supported application for Public Safety Travel App in London',
-    description: 'Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.',
+    title: "Strategic Move to an AI-supported application for Public Safety Travel App in London",
+    description:
+      "Travel confidently around London with maps and live travel updates. Our reliable journey planner will map a safe route.",
   },
-  // Add more cards as needed
   {
-    title: 'Fourth Card Example',
-    description: 'This is an additional card to demonstrate the carousel functionality.',
-    
+    title: "Fourth Card Example",
+    description:
+      "This is an additional card to demonstrate the carousel functionality.",
   },
 ];
+
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <ArrowCircleRightIcon
+      onClick={onClick}
+      sx={{
+        color: "#f5f5e8",
+        cursor: "pointer",
+        fontSize: "2rem",
+        position: "absolute",
+        right: "-40px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: 1,
+      }}
+    />
+  );
+};
+
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <ArrowCircleLeftIcon
+      onClick={onClick}
+      sx={{
+        color: "#f5f5e8",
+        cursor: "pointer",
+        fontSize: "2rem",
+        position: "absolute",
+        left: "-40px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: 1,
+      }}
+    />
+  );
+};
+
 const Slick = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerView = { xs: 1, lg: 3 }; // 1 card on mobile, 3 on desktop
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex + cardsPerView.lg >= cardData.length ? 0 : prevIndex + 1
-    );
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? cardData.length - cardsPerView.lg : prevIndex - 1
-    );
-  };
-
-  const getVisibleCards = () => {
-    const endIndex = currentIndex + cardsPerView.lg;
-    if (endIndex > cardData.length) {
-      return [
-        ...cardData.slice(currentIndex),
-        ...cardData.slice(0, endIndex % cardData.length)
-      ];
-    }
-    return cardData.slice(currentIndex, endIndex);
-  };
-
-    return(
-<>
-<Grid container sx={{backgroundColor:"#242627", display:"flex", justifyContent:"center"}}>
-    <Grid size={{xs:12}} sx={{width:"80%", margin:"0 auto", backgroundColor:"#242627",display:"flex",flexDirection:"column", gap:2, m:5}}>
-        <Typography sx={{color:"#dee0ff",padding:"10px",width:"fit-content", backgroundColor:"#1a1b1c", fontSize:"12px"}}>
-            WHAT WE USE
-        </Typography>
-        <Typography sx={{color:"#dee0ff", fontSize:"40px", fontWeight:"bold"}}>
-            Bringing the best IT vendors to you.
-        </Typography>
-        <Typography sx={{color:"#dee0ff"}}>
-            Working only with the best, to ensure the quality of our services, and to bring state of the art technology to those who need it.
-        </Typography>
-    </Grid>
-     <Grid size={{xs:12}} sx={{display:"flex", justifyContent:"center", backgroundColor:"#242627", gap:5}}>
-        <Box
+  return (
+    <Box sx={{ backgroundColor: "#242627", padding: "40px 0" }}>
+      <Box sx={{ width: "80%", margin: "0 auto", textAlign: "center" }}>
+        <Typography
           sx={{
-            boxShadow: 3,
-            padding: '20px',
-            borderTopLeftRadius: '15px',
-            borderTopRightRadius: '15px',
-            backgroundColor: '#1a1b1c',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 2
+            color: "#dee0ff",
+            padding: "10px",
+            backgroundColor: "#1a1b1c",
+            fontSize: "12px",
+            display: "inline-block",
+            marginBottom: "10px",
           }}
         >
-          <ArrowCircleLeftIcon 
-            sx={{color:"#f5f5e8", cursor: 'pointer'}} 
-            onClick={handlePrev}
-          />
-          <Typography sx={{color:"#f5f5e8"}}>Your IT Challenges</Typography>
-          <ArrowCircleRightIcon 
-            sx={{color:"#f5f5e8", cursor: 'pointer'}} 
-            onClick={handleNext}
-          />
-        </Box>
-      </Grid>
-      
-      <Grid size={{xs:12}}>
-        <Box sx={{ height: '10px', backgroundColor: '#1F2121'}} />
-      </Grid>
-      
-      <Grid size={{xs:12}} sx={{width:"80%", margin:"0 auto", overflow: 'hidden',m:8}}>
-        <Box sx={{ 
-          display: 'flex',
-          transition: 'transform 0.5s ease',
-          transform: `translateX(-${currentIndex * (100/cardsPerView.lg)}%)`,
-          width: `${(cardData.length / cardsPerView.lg) * 72}%`
-        }}>
+          WHAT WE USE
+        </Typography>
+        <Typography
+          sx={{ color: "#dee0ff", fontSize: "40px", fontWeight: "bold" }}
+        >
+          Bringing the best IT vendors to you.
+        </Typography>
+        <Typography sx={{ color: "#dee0ff", marginBottom: "30px" }}>
+          Working only with the best, to ensure the quality of our services, and
+          to bring state of the art technology to those who need it.
+        </Typography>
+      </Box>
+      <Box sx={{ position: "relative", width: "80%", margin: "0 auto" }}>
+        <Slider {...settings}>
           {cardData.map((card, index) => (
-            <Box 
-              key={index} 
-              sx={{ 
-                flex: `0 0 ${100/cardsPerView.lg}%`,
-                padding: '0 10px',
-                display: 'flex',
-                justifyContent: 'center'
-              }}
-            >
+            <Box key={index} sx={{ padding: "0 10px" }}>
               <Card
                 sx={{
-                  width: '100%',
-               
-                  maxWidth: { xs: '100%', lg: '90%' },
-                backgroundColor:"#1a1b1c",
-                height:"auto",
-                  padding: '12px',
-                  margin: { xs: '10px 0', lg: '0 10px' },
-                  transition: '0.3s',
-                  border: '1px solid rgba(3, 1, 1, 0.7)',
-                  borderRadius: '10px',
+                  backgroundColor: "#1a1b1c",
+                  border: "1px solid rgba(3, 1, 1, 0.7)",
+                  borderRadius: "10px",
+                  padding: "20px",
+                  height: "100%",
                 }}
               >
-                <CardContent sx={{ minHeight: '100px' }}>
+                <CardContent>
                   <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    sx={{ fontSize: '20px', fontWeight: 600,color:"#f5f5e8"  }}
+                    variant="h6"
+                    sx={{ fontWeight: 600, color: "#f5f5e8" }}
                   >
                     {card.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ fontSize:'16px', marginTop:'10px',color:"#f5f5e8"}}>
+                  <Typography
+                    sx={{ mt: 1, fontSize: "14px", color: "#f5f5e8" }}
+                  >
                     {card.description}
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
                     sx={{
-                      fontSize: '10px',
-                      textTransform: 'none',
-                      fontWeight: '600',
-                      position: 'relative',
-                      color:"#f5f5e8",
+                      fontSize: "10px",
+                      textTransform: "none",
+                      fontWeight: "600",
+                      color: "#f5f5e8",
                       ":hover": {
-                        color: 'white',
-                        fontWeight:"bold",
-                        background: 'none',
+                        color: "white",
+                        fontWeight: "bold",
+                        background: "none",
                       },
                     }}
                   >
@@ -157,10 +173,10 @@ const Slick = () => {
               </Card>
             </Box>
           ))}
-        </Box>
-      </Grid>
-</Grid>
-</>
-    );
-}
-export default Slick
+        </Slider>
+      </Box>
+    </Box>
+  );
+};
+
+export default Slick;
