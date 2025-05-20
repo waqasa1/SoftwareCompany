@@ -165,6 +165,7 @@ const HeroSection = () => {
               paddingLeft: "10px",
               fontWeight: "700",
               fontSize: "20px",
+              borderLeft: {xs:'2px solid gray',lg:'none'}
             }}
           >
             {" "}
@@ -289,6 +290,7 @@ const HeroSection = () => {
           margin: "0 auto",
           justifyContent: "space-between",
           marginTop: "20px",
+          px:'20px'
         }}
       >
         <Box sx={{ padding: "10px" }}>
@@ -402,7 +404,7 @@ const HeroSection = () => {
       </Box>
       {/*--------------------- How We Do  Section ------------------*/}
       <Box sx={{ backgroundColor: "#B3C9E7", py: "20px" }}>
-        <Box sx={{ width: { lg: "80%" }, margin: "0 auto" }}>
+        <Box sx={{ width: { lg: "80%" }, margin: "0 auto", px:'20px' }}>
           <Button
             sx={{
               color: "gray",

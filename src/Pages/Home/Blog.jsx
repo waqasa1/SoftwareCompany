@@ -119,7 +119,7 @@ const Blog = () => {
           BLOG
         </Typography>
         <Typography sx={{ fontSize: "40px", fontWeight: "bold" }}>
-          The Tecnologia Blog
+          The ThinkOWebsite Blog
         </Typography>
         <Typography sx={{ color: "#9c9c9c" }}>
           Our official blog with news, technology advice, and business culture.
@@ -152,7 +152,7 @@ const Blog = () => {
             >
               <Typography
                 sx={{
-                  fontSize: "32px",
+                  fontSize: { xs: "20px", lg: "32px" },
                   fontWeight: "bold",
                   ":hover": {
                     color: "blue",

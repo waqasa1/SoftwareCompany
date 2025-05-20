@@ -12,21 +12,21 @@ import test3 from '../../assets/test3.svg'
 const testimonials = [
   {
     id: 1,
-    text: "Tecnologia has been an outstanding partner. Their team is professional, knowledgeable and customer-service driven. Tecnologia proactive collaborative approach has been critical in helping us build an IT infrastructure that enables our success today and supports our long-term positioning strategy.",
+    text: "ThinkOWebsite has been an outstanding partner. Their team is professional, knowledgeable and customer-service driven. Tecnologia proactive collaborative approach has been critical in helping us build an IT infrastructure that enables our success today and supports our long-term positioning strategy.",
     author: "Amanda Parks",
     position: "Network Manager, Healthcare Organization",
     avatar: test1,
   },
   {
     id: 2,
-    text: "Tecnologia has been an outstanding partner. Their team is professional, knowledgeable and customer-service driven. Tecnologia proactive collaborative approach has been critical in helping us build an IT infrastructure that enables our success today and supports our long-term positioning strategy.",
+    text: "ThinkOWebsite has been an outstanding partner. Their team is professional, knowledgeable and customer-service driven. Tecnologia proactive collaborative approach has been critical in helping us build an IT infrastructure that enables our success today and supports our long-term positioning strategy.",
     author: "Michael Johnson",
     position: "CTO, Tech Startup",
     avatar: test2,
   },
   {
     id: 3,
-    text: "I’ve been a customer for more than a decade. Tecnologia is an example of the way Managed Services should be done. They do their very best to make sure you succeed. If there’s an issue, they step in immediately. We will continue to be a customer for years to come.",
+    text: "I’ve been a customer for more than a decade. ThinkOWebsite is an example of the way Managed Services should be done. They do their very best to make sure you succeed. If there’s an issue, they step in immediately. We will continue to be a customer for years to come.",
     author: "Sarah Williams",
     position: "Operations Director, Retail Chain",
     avatar: test3,

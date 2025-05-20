@@ -65,7 +65,7 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {" "}
-          {/* Desktop rocoo icon */}
+          {/* Desktop ThinkOWeb icon */}
           <Box
             onClick={handleHomeClick}
             display="flex"
@@ -83,15 +83,15 @@ function Navbar() {
                 fontFamily: "monospace",
                 // flexGrow: '1',
                 fontWeight: 700,
-                letterSpacing: ".3rem",
+                letterSpacing: "0rem",
                 color: "inherit",
                 textDecoration: "none",
               }}
             >
-              Rocco
+              ThinkOWebsite
             </Typography>
           </Box>
-          {/* Mobile rocoo icon */}
+          {/* Mobile ThinkOWeb icon */}
           <Box
             onClick={handleHomeClick}
             display="flex"
@@ -107,12 +107,13 @@ function Navbar() {
                 mr: 2,
                 display: { xs: "flex", lg: "none" },
                 fontWeight: 700,
-                letterSpacing: ".3rem",
+                letterSpacing: "0rem",
                 color: "inherit",
                 textDecoration: "none",
+                fontSize:'15px'
               }}
             >
-              Rocco
+              ThinkOWeb
             </Typography>
           </Box>
           {/* Desktop menu items */}

@@ -121,6 +121,7 @@ const ContactPage = () => {
                                 Get direction
                             </Button>
                         </Box>
+                         <Divider sx={{ width: '80%', margin: '0 auto', mb: '20px', display: { xs: 'block', lg: 'none' } }} />
                         <Box sx={{ width: { xs: '100%', lg: '20%' }, mb: 2, paddingLeft: '80px' }}>
                             <Typography sx={{ fontSize: '30px', fontWeight: '600', color: '#0A0D31', letterSpacing: '0px' }}>Kansas</Typography>
                             <Typography sx={{ fontSize: '20px', fontWeight: '600', letterSpacing: '0px' }}>Kansas City</Typography>

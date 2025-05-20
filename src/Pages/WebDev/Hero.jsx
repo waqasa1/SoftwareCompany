@@ -177,7 +177,7 @@ const Hero = () => {
           width: { lg: "80%" },
           margin: "20px auto",
           px: "20px",
-          height: "80dvh",
+          height: {lg:"80vh"},
         }}
       >
         <Box
@@ -206,7 +206,7 @@ const Hero = () => {
               sx={{ fontSize: "1rem", color: "gray", marginTop: "30px" }}
             >
               Evolve your digital presence with 360 web development services
-              focused on creating a solid online presence. Digital Otters
+              focused on creating a solid online presence. ThinkOWebsite
               transform your ideas into working websites with a next-generation
               tech stack improving ROIs massively.
             </Typography>

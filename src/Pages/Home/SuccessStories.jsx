@@ -50,7 +50,7 @@ const SuccessStories = () => {
 
   return (
     <>
-      <Box sx={{ py: "20px" }}>
+      <Box sx={{ py: "20px", px:'20px' }}>
         <Box sx={{ width: { lg: "80%" }, margin: "0 auto" }}>
           <Button
             sx={{

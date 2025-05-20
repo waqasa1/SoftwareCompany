@@ -108,7 +108,7 @@ function Solution() {
           />
           <Box sx={{ p: 4 }}>
             <Typography>
-              Tecnologia is your trusted partner for IT management, data
+              ThinkOWebsite is your trusted partner for IT management, data
               security, and cloud technology with one goal in mind: to transform
               the way your business works in order to save you time and money.
             </Typography>
@@ -132,7 +132,7 @@ function Solution() {
               Comprehensive IT services for businesses
             </Typography>
             <Typography>
-              When we say comprehensive, we mean comprehensive. Tecnologia has
+              When we say comprehensive, we mean comprehensive. ThinkOWebsite has
               the experience and expertise to provide an excellent experience
               across spheres, for truly holistic IT.
             </Typography>
@@ -276,10 +276,10 @@ function Solution() {
                   },
                 }}
               >
-                Why choose services from Tecnologia?
+                Why choose services from ThinkOWebsite?
               </Typography>
               <Typography sx={{ color: "#9c9c9c" }}>
-                Tecnologia services provide businesses with an edge over the
+                ThinkOWebsite services provide businesses with an edge over the
                 competition with a variety of benefits. Opting for outsourced IT
                 services improve the efficiency of business and build trust with
                 customers and clients. Our services can be tailored to meet
