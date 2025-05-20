@@ -118,10 +118,12 @@ const Blog = () => {
         >
           BLOG
         </Typography>
-        <Typography sx={{ fontSize: "40px", fontWeight: "bold" }}>
+        <Typography data-aos="fade"
+            data-aos-delay="200" sx={{ fontSize: "40px", fontWeight: "bold" }}>
           The ThinkOWebsite Blog
         </Typography>
-        <Typography sx={{ color: "#9c9c9c" }}>
+        <Typography data-aos="fade"
+            data-aos-delay="400" sx={{ color: "#9c9c9c" }}>
           Our official blog with news, technology advice, and business culture.
         </Typography>
       </Box>

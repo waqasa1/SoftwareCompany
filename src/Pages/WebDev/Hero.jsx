@@ -191,6 +191,8 @@ const Hero = () => {
         >
           <Box sx={{ width: { lg: "50%" } }}>
             <Typography
+            data-aos="fade"
+            data-aos-delay="200"
               sx={{
                 fontSize: { xs: "30px", lg: "60px" },
                 fontWeight: "700",
@@ -203,6 +205,8 @@ const Hero = () => {
               Top Web Development Services Agency
             </Typography>
             <Typography
+            data-aos="fade"
+            data-aos-delay="300"
               sx={{ fontSize: "1rem", color: "gray", marginTop: "30px" }}
             >
               Evolve your digital presence with 360 web development services

@@ -9,14 +9,15 @@ const ContactPage = () => {
                 <Box sx={{ width: { lg: '80%' }, margin: '0 auto' }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Button sx={{ color: 'gray', backgroundColor: 'rgb(245, 237, 237)', fontSize: '10px', fontWeight: '600', marginTop: '20px' }}>Contact</Button>
-                        <Typography sx={{ fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700', letterSpacing: '-1px', marginTop: '10px' }}>We’re here to help</Typography>
+                        <Typography data-aos="fade" data-aos-delay="200" sx={{ fontSize: { xs: '20px', lg: '48px' }, fontWeight: '700', letterSpacing: '-1px', marginTop: '10px' }}>We’re here to help</Typography>
                         <Box sx={{ display: 'flex', gap: '20px', alignItems: 'center', flexDirection: { xs: 'column', lg: 'row' }, marginBottom: '10px' }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <Typography>Call us at:</Typography>
                                 <Typography> 1-800-356-8933</Typography>
                             </Box>
                             <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
-                                <svg width="24" height="80" viewBox="0 0 24 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg data-aos="slide-right"
+            data-aos-delay="200" width="24" height="80" viewBox="0 0 24 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 10L16 50L8 90" stroke="gray" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </Box>

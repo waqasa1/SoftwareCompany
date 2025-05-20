@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -65,19 +65,6 @@ const HeroSection = () => {
       image: Industry,
     }
   ];
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Moves up when you scroll down, down when you scroll up
-  const translateY = -scrollY * 0.1; // Adjust multiplier to control speed
 
   const [expandedCard, setExpandedCard] = useState(null);
   const toggleExpand = (index) => {
@@ -98,6 +85,8 @@ const HeroSection = () => {
       >
         <Box sx={{ display: "flex", flexDirection: "column", my: "auto" }}>
           <Typography
+            data-aos="fade"
+            data-aos-delay="200"
             sx={{
               fontSize: { xs: "1.2rem", lg: "3.5rem" },
               lineHeight: "1em",
@@ -108,11 +97,14 @@ const HeroSection = () => {
           >
             We manage your IT, so you can manage your business.
           </Typography>
-          <Typography sx={{ fontSize: { xs: "1rem", lg: "2rem" } }}>
+          <Typography data-aos="slide-up"
+            data-aos-delay="200" sx={{ fontSize: { xs: "1rem", lg: "2rem" } }}>
             Take charge of your business continuity with innovative IT solutions
           </Typography>
           <Box sx={{ marginTop: "10px" }}>
             <Button
+              data-aos="fade"
+              data-aos-delay="200"
               onClick={() => {
                 const contactSection = document.getElementById(
                   "contact-form-section"
@@ -130,7 +122,10 @@ const HeroSection = () => {
             >
               Schedule a Free Consultation
             </Button>
-            <Button onClick={handleService} variant="contained" sx={{ textTransform: "none" }}>
+            <Button
+              data-aos="fade"
+              data-aos-delay="200"
+              onClick={handleService} variant="contained" sx={{ textTransform: "none" }}>
               Services
             </Button>
           </Box>
@@ -286,12 +281,10 @@ const HeroSection = () => {
             src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Shape-dots-arrow-right.svg"
             alt="Tilted image"
             style={{
+              transform: "rotate(-90deg)",
               height: "220px",
-              marginTop: "100px",
-              marginRight: '20px',
-              transform: `rotate(-90deg) translateX(${-translateY}px)`,
-              transition: 'transform 0.1s linear',
-              position: 'relative', // or 'fixed' for stronger parallax
+              marginTop: "30px",
+              marginRight: '20px'
             }}
           />
         </Box>

@@ -90,11 +90,13 @@ function Solution() {
           >
             SOLUTIONS
           </Typography>
-          <Typography sx={{ fontSize: "40px", fontWeight: "bold" }}>
+          <Typography data-aos="fade"
+            data-aos-delay="200" sx={{ fontSize: "40px", fontWeight: "bold" }}>
             Services & Solutions
           </Typography>
           <Box sx={{}}>
-            <Typography sx={{ color: "#9c9c9c" }}>
+            <Typography data-aos="fade"
+            data-aos-delay="200" sx={{ color: "#9c9c9c" }}>
               Take your company to new heights by investing in our reliable and
               efficient technology solutions.
             </Typography>
