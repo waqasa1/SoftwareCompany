@@ -74,8 +74,8 @@ const CompanyDropdown = ({ closeMenu }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   flexDirection: "column",
-                  ":hover": { backgroundColor: "#f0f0f0" },
                   ":hover": {
+                    backgroundColor: "#f0f0f0",
                     boxShadow: 24,
                   },
                 }}

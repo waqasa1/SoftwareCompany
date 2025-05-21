@@ -276,7 +276,9 @@ const HeroSection = () => {
             Simplifying IT for a complex world.
           </Typography>
         </Box>
-        <Box>
+        <Box data-aos="slide-up"
+              data-aos-offset="300" 
+              data-aos-duration="800">
           <img
             src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Shape-dots-arrow-right.svg"
             alt="Tilted image"
