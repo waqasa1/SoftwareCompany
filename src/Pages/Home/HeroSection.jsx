@@ -279,14 +279,18 @@ const HeroSection = () => {
         <Box data-aos="slide-up"
               data-aos-offset="300" 
               data-aos-duration="800">
-          <img
+          <Box
+            component='img'
             src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Shape-dots-arrow-right.svg"
             alt="Tilted image"
-            style={{
+            sx={{
               transform: "rotate(-90deg)",
               height: "220px",
               marginTop: "30px",
-              marginRight: '20px'
+              marginRight: '20px',
+              ":hover":{
+                 filter:'invert(1)',
+              }
             }}
           />
         </Box>
