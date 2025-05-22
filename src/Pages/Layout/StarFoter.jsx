@@ -31,6 +31,7 @@ const StarFooter = () => {
     "ERP Solutions",
   ];
   const CompanyItems = [
+    
     "About us",
     "Why us",
     "Team",

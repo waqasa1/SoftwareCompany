@@ -17,6 +17,7 @@ import Node from "../Company/Node";
 import ReactServices from "../Company/React";
 import Shopify from "../Company/Shopify.jsx";
 import Php from "../Company/Php.jsx";
+import AboutUs from "./Contact/AboutUs.jsx";
 
 const AppRoutes = () => {
   return (
@@ -38,6 +39,7 @@ const AppRoutes = () => {
       <Route path="/react" element={<ReactServices />} />
       <Route path="/shopify" element={<Shopify />}/>
       <Route path="/php" element={<Php />} />
+      <Route path="/about" element={<AboutUs />} />
       </Route>
     </Routes>
     </>
