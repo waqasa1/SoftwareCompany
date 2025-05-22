@@ -277,8 +277,8 @@ const HeroSection = () => {
           </Typography>
         </Box>
         <Box data-aos="slide-up"
-              data-aos-offset="300" 
-              data-aos-duration="800">
+          data-aos-offset="300"
+          data-aos-duration="800">
           <Box
             component='img'
             src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Shape-dots-arrow-right.svg"
@@ -288,9 +288,7 @@ const HeroSection = () => {
               height: "220px",
               marginTop: "30px",
               marginRight: '20px',
-              ":hover":{
-                 filter:'invert(1)',
-              }
+              filter: 'invert(1)'
             }}
           />
         </Box>

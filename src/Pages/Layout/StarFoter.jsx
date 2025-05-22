@@ -204,7 +204,8 @@ const StarFooter = () => {
                   component="img"
                   src={footerDot}
                   sx={{
-                    height: { xs: "30vh", lg: "80%" },
+                    height: { xs: "30vh", lg: "50vh" },
+                    // width:'75%',
                     display: "block",
                   }}
                 />
