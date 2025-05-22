@@ -18,8 +18,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Link, useNavigate } from "react-router-dom";
 
 const StarFooter = () => {
+  const navigate = useNavigate();
   const SolutionItems = [
     "Manged Services",
     "IT Consulting & Advisory",
@@ -31,15 +33,12 @@ const StarFooter = () => {
     "ERP Solutions",
   ];
   const CompanyItems = [
-    
-    "About us",
-    "Why us",
-    "Team",
-    "Careers",
-    "Partners & Certifications",
-    "Blog",
-    "Case Studies",
-    "FAQ",
+    { title: "About us", path: "about" },
+    { title: "Why us", path: "why" },
+    { title: "Team", path: "team" },
+    { title: "Partners & Certifications", path: "partners-certifications" },
+    { title: "Blog", path: "blog" },
+    { title: "Case Studies", path: "case-studies" },
   ];
   return (
     <>
@@ -114,8 +113,10 @@ const StarFooter = () => {
                       <Box
                         key={index}
                         sx={{ display: "flex", alignItems: "center" }}
+                        onClick={() => navigate(`/${item.path}`)}
+                         style={{ cursor: 'pointer', }}
                       >
-                        <Typography variant="body2">{item}</Typography>
+                        <Typography variant="body2">{item.title}</Typography>
                       </Box>
                     ))}
                   </Box>
@@ -280,57 +281,56 @@ const StarFooter = () => {
             gap: { xs: 2, lg: 8 },
           }}
         >
-            <Box 
-    textAlign="center" 
-    sx={{ 
-      '&:hover svg': { color: '#0A66C2' }, // LinkedIn blue
-      '&:hover p': { color: '#0A66C2' },
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <LinkedInIcon  />
-    <Typography>LinkedIn</Typography>
-  </Box>
+          <Box
+            textAlign="center"
+            sx={{
+              "&:hover svg": { color: "#0A66C2" }, // LinkedIn blue
+              "&:hover p": { color: "#0A66C2" },
+              transition: "all 0.3s ease",
+            }}
+          >
+            <LinkedInIcon />
+            <Typography>LinkedIn</Typography>
+          </Box>
 
-  {/* YouTube */}
-  <Box 
-    textAlign="center"
-    sx={{
-      '&:hover svg': { color: '#FF0000' }, // YouTube red
-      '&:hover p': { color: '#FF0000' },
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <YouTubeIcon />
-    <Typography>YouTube</Typography>
-  </Box>
+          {/* YouTube */}
+          <Box
+            textAlign="center"
+            sx={{
+              "&:hover svg": { color: "#FF0000" }, // YouTube red
+              "&:hover p": { color: "#FF0000" },
+              transition: "all 0.3s ease",
+            }}
+          >
+            <YouTubeIcon />
+            <Typography>YouTube</Typography>
+          </Box>
 
-  {/* Facebook */}
-  <Box 
-    textAlign="center"
-    sx={{
-      '&:hover svg': { color: '#1877F2' }, // Facebook blue
-      '&:hover p': { color: '#1877F2' },
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <FacebookIcon />
-    <Typography>Facebook</Typography>
-  </Box>
+          {/* Facebook */}
+          <Box
+            textAlign="center"
+            sx={{
+              "&:hover svg": { color: "#1877F2" }, // Facebook blue
+              "&:hover p": { color: "#1877F2" },
+              transition: "all 0.3s ease",
+            }}
+          >
+            <FacebookIcon />
+            <Typography>Facebook</Typography>
+          </Box>
 
-  {/* GitHub */}
-  <Box 
-    textAlign="center"
-    sx={{
-      '&:hover svg': { color: '#181717' }, // GitHub black
-      '&:hover p': { color: '#181717' },
-      transition: 'all 0.3s ease'
-    }}
-  >
-    <GitHubIcon />
-    <Typography>GitHub</Typography>
-  </Box>
-          
+          {/* GitHub */}
+          <Box
+            textAlign="center"
+            sx={{
+              "&:hover svg": { color: "#181717" }, // GitHub black
+              "&:hover p": { color: "#181717" },
+              transition: "all 0.3s ease",
+            }}
+          >
+            <GitHubIcon />
+            <Typography>GitHub</Typography>
+          </Box>
         </Box>
         <Box sx={{ display: "flex", gap: 4, mt: 4 }}>
           <Typography>© 2025 VamTam. All rights reserved.</Typography>
