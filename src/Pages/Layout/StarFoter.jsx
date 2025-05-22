@@ -66,15 +66,15 @@ const StarFooter = () => {
                 mb: 0,
               }}
             >
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 {/* Solutions */}
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <Typography
+                  {/* <Typography
                     sx={{ fontWeight: "bold", mb: 2, color: "white" }}
                   >
                     Solutions
-                  </Typography>
-                  <Box
+                  </Typography> */}
+                  {/* <Box
                     sx={{
                       display: "grid",
                       gridTemplateColumns: "repeat(2, 1fr)",
@@ -91,7 +91,7 @@ const StarFooter = () => {
                         <Typography variant="body2">{item}</Typography>
                       </Box>
                     ))}
-                  </Box>
+                  </Box> */}
                 </Box>
                 {/* comapany */}
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
