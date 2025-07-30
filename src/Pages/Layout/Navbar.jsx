@@ -255,7 +255,7 @@ function Navbar() {
                 variant="contained"
                 sx={{ maxHeight: "30px", textTransform: "none" }}
               >
-                Contact Us
+                Contact
               </Button>
             </Link>
           </Box>

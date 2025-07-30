@@ -146,8 +146,8 @@ const HeroSection = () => {
             sx={{
               clipPath:
                 "polygon(27% 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 1% 100%, 28% 52%)",
-              height: { xs: "200px", lg: "400px" },
-              width: { xs: "300px", lg: "700px" },
+              height: { xs: "auto", lg: "400px" },
+              width: { xs: "270px", lg: "700px" },
             }}
           />
         </Box>

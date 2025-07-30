@@ -269,7 +269,7 @@ const StarFooter = () => {
           >
             T: 1-800-356-8933
           </Typography>
-          <Typography sx={{ paddingLeft: "10px" }}>
+          <Typography sx={{ paddingLeft: "10px", wordWrap:'break-word'}}>
             E: office@tecnologia.com
           </Typography>
         </Box>
